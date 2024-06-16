@@ -10,36 +10,46 @@
   <title>Portfolio</title>
 </head>
 <body>
-  <div class="navbar bg-black">
-    <div class="flex-none">
-      <button class="btn btn-square btn-ghost">
-        <box-icon name='menu' color='#7e74f1'></box-icon>
-      </button>
+  <navbar>
+    <div class="navbar bg-black">
+      <div class="flex-none">
+        <button class="btn btn-square btn-ghost">
+          <box-icon name='menu' color='#7e74f1'></box-icon>
+        </button>
+      </div>
+      <div class="flex">
+        <a class="btn btn-ghost text-xl text-white">Paullor</a>
+      </div>
+      <div class="flex ml-[32%] gap-12 text-white font-bold">
+        <a>About</a>
+        <a>Portfolio</a>
+        <a>Contact</a>
+      </div>
+      <div class="flex ml-auto">
+            <button class="btn glass bg-white text-[#7E74F1] mr-[20px] px-8 font-bold">Click</button>
+      </div>
     </div>
-    <div class="flex">
-      <a class="btn btn-ghost text-xl text-white">Paullor</a>
-    </div>
-    <div class="flex ml-[32%] gap-12 text-white">
-      <a>About</a>
-      <a>Portfolio</a>
-      <a>Contact</a>
-    </div>
-    <div class="flex ml-auto">
-      <button class="btn glass text-white">Glass button</button>
-    </div>
-  </div>
+  </navbar>  
 
   <!-- Start first section -->
-  <section class="w-full h-[770px] bg-[#B6B6B6] flex items-center">
-    <div>
-      <p>MY NAME IS</p>
-      <div class="flex justify-center">
-        <h1 class="text-2xl">Pongthum</h1>
-        <h1 class="text-2xl ml-2" style="color:#7E74F1;">Chotichai</h1>
+
+  <section-1 class="w-full h-[770px] bg-[#B6B6B6] flex items-center justify-center">
+    <div class="">
+      <p class="pb-[72px] font-bold text-xl">MY NAME IS</p>
+      <div class="flex font-extrabold">
+        <h1 class="text-5xl">Pongthum</h1>
+        <h1 class="text-5xl ml-2" style="color:#7E74F1;">Chotichai</h1>
       </div>
-      <p>hi i'm student</p>
+      <p class="font-bold text-xl pt-12">hi i'm student</p>
     </div>
-    <img class="ml-4" src="https://img2.pic.in.th/pic/fatboyc5890abc8e01762f.jpg" alt="My Image">
-  </section>
+    <img class="ml-[150px] w-[545px] h-[496px]" src="https://img2.pic.in.th/pic/fatboyc5890abc8e01762f.jpg" alt="My Image">
+  </section-1>
+
+  <!-- End first section -->
+
+  <section-2 class="w-full h-[774px] bg-[FBFBFB] flex justify-center">
+    <p class="">S E R V I C E S</p>
+    <h1 class="">Dummy</h1>
+  </section-2>
 </body>
 </html>
