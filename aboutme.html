@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <title>About me</title>
+</head>
+<body>
+  <navbar class="md:flex">
+    <div class="navbar bg-black flex items-center p-4">
+      <div class="flex-none">
+        <button class="btn btn-square btn-ghost md:hidden" id="menu-button">
+          <box-icon name='menu' color='#7e74f1'></box-icon>
+        </button>
+      </div>
+      <div class="flex-1">
+        <a class="btn btn-ghost text-xl text-white">Paullor</a>
+      </div>
+      <div class="hidden md:flex md:gap-[120px] text-white font-bold justify-center w-full" id="navbar-links">
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="flex ml-auto">
+        <button class="btn glass bg-white text-[#7E74F1] mr-5 px-6 font-bold ">Click</button>
+      </div>
+    </div>
+    <div class="hidden md:hidden flex-col items-center space-y-4 text-white font-bold" id="mobile-menu">
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </navbar>
+
+  <section id="section-1" class="md:w-full md:h-[770px] md:flex md:mx-[5%]">
+
+    <div id="text-box" class="w-[538px] h-[289px] md:flex">
+      <video class="w-[574px] h-[400px]" autoplay loop muted>
+        <source src="THANK YOU, CRISTIANO RONALDO _ Real Madrid Official Video.mp4">
+      </video>
+      <div class="md:flex">
+        <p style="white-space: nowrap;">s e c t i o n</p>
+        <div class="md:flex">
+          <h1 class="text-5xl md:text-4xl lg:text-5xl">Pongthum </h1>
+          <h1 class="text-5xl ml-2 md:text-4xl lg:text-5xl" style="color:#7E74F1;">Chotichai</h1>
+        </div>  
+      </div>
+    </div>
+  </section>
+  
+</body>
