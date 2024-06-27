@@ -10,46 +10,43 @@
   <title>About me</title>
 </head>
 <body>
-  <navbar class="md:flex">
-    <div class="navbar bg-black flex items-center p-4">
-      <div class="flex-none">
-        <button class="btn btn-square btn-ghost md:hidden" id="menu-button">
-          <box-icon name='menu' color='#7e74f1'></box-icon>
-        </button>
+    <navbar class="md:flex">
+      <div class="navbar bg-black flex items-center p-4">
+        <div class="flex-none">
+          <button class="btn btn-square btn-ghost md:hidden" id="menu-button">
+            <box-icon name='menu' color='#7e74f1'></box-icon>
+          </button>
+        </div>
+        <div class="flex-1">
+          <a class="btn btn-ghost text-xl text-white">Paullor</a>
+        </div>
+        <div class="hidden md:flex md:gap-[120px] text-white font-bold justify-center w-full" id="navbar-links">
+          <a href="#about">About</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="flex ml-auto">
+          <button class="btn glass bg-white text-[#7E74F1] mr-5 px-6 font-bold ">Click</button>
+        </div>
       </div>
-      <div class="flex-1">
-        <a class="btn btn-ghost text-xl text-white">Paullor</a>
-      </div>
-      <div class="hidden md:flex md:gap-[120px] text-white font-bold justify-center w-full" id="navbar-links">
+      <div class="hidden md:hidden flex-col items-center space-y-4 text-white font-bold" id="mobile-menu">
         <a href="#about">About</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#contact">Contact</a>
       </div>
-      <div class="flex ml-auto">
-        <button class="btn glass bg-white text-[#7E74F1] mr-5 px-6 font-bold ">Click</button>
-      </div>
-    </div>
-    <div class="hidden md:hidden flex-col items-center space-y-4 text-white font-bold" id="mobile-menu">
-      <a href="#about">About</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </navbar>
-
-  <section id="section-1" class="md:w-full md:h-[770px] md:flex md:mx-[5%]">
-
-    <div id="text-box" class="w-[538px] h-[289px] md:flex">
-      <video class="w-[574px] h-[400px]" autoplay loop muted>
-        <source src="THANK YOU, CRISTIANO RONALDO _ Real Madrid Official Video.mp4">
-      </video>
-      <div class="md:flex">
-        <p style="white-space: nowrap;">s e c t i o n</p>
-        <div class="md:flex">
-          <h1 class="text-5xl md:text-4xl lg:text-5xl">Pongthum </h1>
-          <h1 class="text-5xl ml-2 md:text-4xl lg:text-5xl" style="color:#7E74F1;">Chotichai</h1>
-        </div>  
-      </div>
-    </div>
-  </section>
+    </navbar>
   
-</body>
+    <section id="section-1" class="bg-[#B6B6B6] flex md:w-full md:h-[1254px] md:justify-end md:pr-[100px] md:pt-[210px]">
+        <div class="full"></div>    
+            <video class="w-[547px] h-[400px] md:pr-[120px] md:pb-[90px]" autoplay loop muted><source src="THANK YOU, CRISTIANO RONALDO _ Real Madrid Official Video.mp4"></video>
+            <div class="w-[538px] h-[290px] flex md:flex-col md:">
+                <p class="opacity-80 font-bold text-xl md:pl-[32px] md:pt-[40px]">S e c t i o n</p>
+                <div class="flex font-bold md:mt-[40px]"> 
+                    <h1 class="text-5xl md:text-4xl lg:text-5xl gap-[5px]">About</h1>
+                    <h1 class="text-5xl ml-2 md:text-4xl lg:text-5xl" style="color:#7E74F1;">Me</h1>
+                </div>
+                <p class="font-medium text-sm md:pt-[50px]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam ea doloremque quo molestiae? Quo, ipsum porro assumenda deserunt animi tempora. Quos tenetur rem, doloremque neque id dignissimos ducimus cum quas.</p>
+            </div>
+    </section>
+    
+  </body>
