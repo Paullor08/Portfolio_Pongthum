@@ -14,14 +14,14 @@
   <navbar class="md:flex">
     <div class="navbar bg-black flex items-center p-4">
       <div class="flex-none">
-        <button class="btn btn-square btn-ghost md:hidden" id="menu-button">
+        <button onclick="hideShow()" class="btn btn-square btn-ghost md:hidden" id="menu-button">
           <box-icon name='menu' color='#7e74f1'></box-icon>
         </button>
       </div>
       <div class="flex-1">
         <a class="btn btn-ghost text-xl text-white">Paullor</a>
       </div>
-      <div class="hidden md:flex md:gap-[120px] text-white font-bold justify-center w-full" id="navbar-links">
+      <div class="bg-black hidden md:flex md:gap-[120px] text-white font-bold justify-center w-full" id="navbar-links">
         <a href="aboutme.html">About</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#contact">Contact</a>
@@ -36,6 +36,12 @@
       <a href="#contact">Contact</a>
     </div>
   </navbar>
+  <script>
+    function hideShow() {
+      const mobilemenu = document.getElementById('mobile-menu');
+      mobilemenu.classList.toggle('hidden');
+    }
+  </script>
   
   <!-- Start first section -->
 
@@ -47,7 +53,9 @@
             <h1 class="text-5xl md:text-4xl lg:text-5xl">Pongthum </h1>
             <h1 class="text-5xl ml-2 md:text-4xl lg:text-5xl" style="color:#7E74F1;">Chotichai</h1>
         </div>
-        <p class="font-medium text-sm mx-[2%] md:pt-4 md:pl-[]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur perspiciatis incidunt rem provident omnis possimus officiis temporibus, similique delectus, magni officia aspernatur sint, recusandae dolores vel deleniti quisquam praesentium distinctio!</p>
+        <p class="font-medium text-sm mx-[2%] md:pt-4 md:pl-[]">
+          "Welcome to Pongthum Chotichai's Coding Journey! Dive into my world where curiosity meets code. Discover insights, tips, and projects reflecting my passion for coding, nurtured since a transformative school leadership camp. From Python challenges to web development adventures, join me in exploring the art and science of programming."
+        </p>
     </div>
     <img class="ml-[3%] mr-4 w-full max-w-[545px] h-auto hidden md:flex md:w-[545px] md:h-[496px] md:rounded-xl" src="https://img2.pic.in.th/pic/428eb9d2761ee2e465.jpg" alt="My Image">
   </section-1>
@@ -61,24 +69,30 @@
 
     <div class="flex flex-col items-center md:flex md:flex-col md:items-center md:gap-[60px] lg:flex lg:flex-row lg:w-full lg:justify-center">
       <!--box1-->
-      <div id="sec2-box-1" class="flex w-[361px] h-[294px] bg-slate-50 border-2 mt-[60px] flex items-center flex-col rounded-lg">
-          <div class="flex boxinside-1 w-[56px] h-[56px] mt-[53px] border-black border-2 bg-white rounded-lg"></div>
-          <p class="flex font-bold text-2xl mt-[25px]">Dummy</p>
+      <div id="sec2-box-1" class="flex w-[361px] h-[294px] bg-slate-50 mt-[60px] flex items-center flex-col rounded-lg">
+          <div class="flex boxinside-1 w-[56px] h-[56px] mt-[53px] bg-slate-200 rounded-lg items-center justify-center">
+            <box-icon name='python' type='logo' color='#7E74F1' class="w-[55px] h-[55px]"></box-icon>
+          </div>
+          <p class="flex font-bold text-2xl mt-[25px]">Python</p>
           <p class="flex font-medium mt-[29px] pl-[45px] pr-[45px] text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore minus neque nihil ver</p>
       </div>
 
 
       <!--box2-->
-      <div id="sec2-box-2" class="flex w-[361px] h-[294px] bg-slate-50 border-2 mt-[60px] flex items-center flex-col rounded-lg">
-        <div class="flex boxinside-2 w-[56px] h-[56px] mt-[53px] border-black border-2 bg-white rounded-lg"></div>
-        <p class="flex font-bold text-2xl mt-[25px]">Dummy</p>
+      <div id="sec2-box-2" class="flex w-[361px] h-[294px] bg-slate-50 mt-[60px] flex items-center flex-col rounded-lg">
+        <div class="flex boxinside-2 w-[56px] h-[56px] mt-[53px] bg-slate-200 bg-white rounded-lg">
+          <box-icon name='html5' type='logo' color='#7E74F1' class="w-[55px] h-[55px]">
+        </div>
+        <p class="flex font-bold text-2xl mt-[25px]">HTML</p>
         <p class="flex font-medium mt-[29px] pl-[45px] pr-[45px] text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore minus neque nihil ver</p>
       </div>
 
       <!--box3-->
-      <div id="sec2-box-3" class="flex w-[361px] h-[294px] bg-slate-50 border-2 mt-[60px] flex items-center flex-col rounded-lg">
-        <div class="flex boxinside-3 w-[56px] h-[56px] mt-[53px] border-black border-2 bg-white rounded-lg"></div>
-        <p class="flex font-bold text-2xl mt-[25px]">Dummy</p>
+      <div id="sec2-box-3" class="flex w-[361px] h-[294px] bg-slate-50 mt-[60px] flex items-center flex-col rounded-lg">
+        <div class="flex boxinside-3 w-[56px] h-[56px] mt-[53px] bg-slate-200 bg-white rounded-lg">
+          <box-icon type='logo' name='tailwind-css' color="#7E74F1" class="w-[55px] h-[55px]"></box-icon>
+        </div>
+        <p class="flex font-bold text-2xl mt-[25px]">Tailwind-CSS</p>
         <p class="flex font-medium mt-[29px] pl-[45px] pr-[45px] text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore minus neque nihil ver</p>
       </div>
     </div>
