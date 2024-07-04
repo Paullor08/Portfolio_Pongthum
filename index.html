@@ -11,7 +11,7 @@
   <title>Portfolio</title>
 </head>
 <body>
-  <navbar class="md:flex">
+  <navbar class="md:flex w-full z-20 fixed">
     <div class="navbar bg-black flex items-center p-4">
       <div class="flex-none">
         <button onclick="hideShow()" class="btn btn-square btn-ghost md:hidden" id="menu-button">
@@ -21,16 +21,11 @@
       <div class="flex-1">
         <a class="btn btn-ghost text-xl text-white">Paullor</a>
       </div>
-      <div class="bg-black hidden md:flex md:gap-[120px] text-white font-bold justify-center w-full" id="navbar-links">
-        <a href="aboutme.html">About</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-      </div>
       <div class="flex ml-auto">
         <button class="btn glass bg-white text-[#7E74F1] mr-5 px-6 font-bold ">Click</button>
       </div>
     </div>
-    <div class="hidden md:hidden flex-col items-center space-y-4 text-white font-bold" id="mobile-menu">
+    <div class="top-[60px] fixed z-20 bg-white hidden md:hidden flex-col text-center text-black font-bold w-[100px] ml-[10px]" id="mobile-menu">
       <a href="aboutme.html">About</a>
       <a href="#portfolio">Portfolio</a>
       <a href="#contact">Contact</a>
