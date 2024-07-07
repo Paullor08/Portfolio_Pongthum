@@ -1,210 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-  <title>About me</title>
-</head>
-<body class="">
-  <navbar class="flex w-full z-20 fixed ">
-    <div class="navbar bg-black flex items-center p-4">
-      <div class="flex-none">
-        <button onclick="hideShow()" class="btn btn-square btn-ghost md:hidden" id="menu-button">
-          <box-icon name='menu' color='#7e74f1'></box-icon>
-        </button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <title>About me</title>
+  </head>
+  <body class="">
+    <navbar class="flex w-full z-20 fixed">
+      <div class="navbar bg-black flex items-center p-4">
+        <div class="flex-none">
+          <button
+            onclick="hideShow()"
+            class="btn btn-square btn-ghost md:hidden"
+            id="menu-button"
+          >
+            <box-icon name="menu" color="#7e74f1"></box-icon>
+          </button>
+        </div>
+        <div class="flex-1">
+          <a class="btn btn-ghost text-xl text-white">Paullor</a>
+        </div>
+        <div
+          class="hidden md:flex md:gap-[120px] text-white font-bold justify-center w-full"
+          id="navbar-links"
+        >
+          <a href="./aboutme.html">About</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="./contact.html">Contact</a>
+        </div>
+        <div class="hidden md:flex ml-auto">
+          <a href="./index.html">
+            <button
+              class="btn glass bg-white text-[#7E74F1] mr-5 px-6 font-bold"
+            >
+              Home
+            </button>
+          </a>
+        </div>
       </div>
-      <div class="flex-1">
-        <a class="btn btn-ghost text-xl text-white">Paullor</a>
-      </div>
-      <div class="hidden md:flex md:gap-[120px] text-white font-bold justify-center w-full" id="navbar-links">
-        <a href="aboutme.html">About</a>
+      <div
+        class="top-[60px] fixed z-20 bg-slate-300 md:hidden flex-col text-center text-black font-bold w-[100px] ml-[10px]"
+        id="mobile-menu"
+      >
+        <a href="./index.html">Home</a></br>
+        <a href="./aboutme.html">About</a>
         <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
+        <a href="./contact.html">Contact</a>
       </div>
-      <div class="flex ml-auto">
-        <button class="btn glass bg-white text-[#7E74F1] mr-5 px-6 font-bold "><a href="./index.html">Home</a></button>
-      </div>
-    </div>
-    <div class="top-[60px] fixed z-20 bg-slate-300 md:hidden flex-col text-center text-black font-bold w-[100px] ml-[10px]" id="mobile-menu">
-      <a href="#about">About</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </navbar>
-  <script>
-    function hideShow() {
-      const mobilemenu = document.getElementById('mobile-menu');
-      mobilemenu.classList.toggle('hidden');
-    } 
-  </script>
+    </navbar>
+    <script>
+      function hideShow() {
+        const mobilemenu = document.getElementById("mobile-menu");
+        mobilemenu.classList.toggle("hidden");
+      }
+    </script>
 
-    <!--start section1-->    
+    <!--start section1-->
 
-    <section id="section-1" class="bg-[#B6B6B6] w-full h-[971px] md:flex md:w-full md:h-[900px] md:justify-end md:pr-[100px]">
-      <div class="flex flex-col justify-center items-center lg:flex-row lg:ml-[100px]">   
-          <video class="w-[547px] h-[400px] rounded-lg md:pr-[60px] md:pb-[90px]" autoplay loop muted>
-            <source src="THANK YOU, CRISTIANO RONALDO _ Real Madrid Official Video.mp4">
-          </video>
-          <div class="w-[538px] h-[290px] md:flex md:flex-col md:ml-[110px] md:mb-[183px]">
-              <p class="opacity-80 font-bold text-xl md:pt-[40px] flex justify-center">S e c t i o n</p>
-              <div class="flex font-bold flex justify-center md:mt-[40px] mt-[41px]"> 
-                  <h1 class="text-5xl md:text-4xl lg:text-5xl gap-[5px]">About</h1>
-                  <h1 class="text-5xl ml-2 md:text-4xl lg:text-5xl" style="color:#7E74F1;">Me</h1>
-              </div>
-              <p class="font-medium text-lg  text-center pt-[52px] pb-[135px] md:pt-[47px]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam ea doloremque quo molestiae? Quo, ipsum porro assumenda deserunt animi tempora. Quos tenetur rem, doloremque neque id dignissimos ducimus cum quas.</p>
+    <section
+      id="section-1"
+      class="bg-[#B6B6B6] w-full h-[971px] pt-[127px] md:flex md:w-full md:h-[900px] md:justify-end md:pr-[100px]"
+    >
+      <div
+        class="flex flex-col justify-center items-center lg:flex-row lg:ml-[100px]"
+      >
+        <video
+          class="w-[547px] h-[400px] rounded-lg md:pr-[60px] md:pb-[90px]"
+          autoplay
+          loop
+          muted
+        >
+          <source
+            src="THANK YOU, CRISTIANO RONALDO _ Real Madrid Official Video.mp4"
+          />
+        </video>
+        <div
+          class="w-[538px] h-[290px] md:flex md:flex-col md:ml-[110px] md:mb-[183px]"
+        >
+          <p
+            class="opacity-80 font-bold text-xl md:pt-[40px] flex justify-center"
+          >
+            S e c t i o n
+          </p>
+          <div
+            class="flex font-bold flex justify-center md:mt-[40px] mt-[41px]"
+          >
+            <h1 class="text-5xl md:text-4xl lg:text-5xl gap-[5px]">About</h1>
+            <h1
+              class="text-5xl ml-2 md:text-4xl lg:text-5xl"
+              style="color: #7e74f1"
+            >
+              Me
+            </h1>
           </div>
+          <p
+            class="font-medium text-lg text-center pt-[52px] pb-[135px] md:pt-[47px]"
+          >
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam ea
+            doloremque quo molestiae? Quo, ipsum porro assumenda deserunt animi
+            tempora. Quos tenetur rem, doloremque neque id dignissimos ducimus
+            cum quas.
+          </p>
+        </div>
       </div>
-  </section>
+    </section>
     <!--end section1-->
-    
+
     <!--start section2-->
-    <section id="section-2" class="bg-[#000000] w-full h-[1623px] flex flex-col items-center md:w-full md:h-[850px] md:flex-col">
+    <section
+      id="section-2"
+      class="bg-[#000000] w-full h-[1623px] flex flex-col items-center md:w-full md:h-[850px] md:flex-col"
+    >
+      <p
+        class="h-[50px] text-white text-4xl text-nowrap mt-[154px] md:mb-[130px] md:pt-[104px]"
+      >
+        My stack
+      </p>
 
-        <p class="h-[50px] text-white text-4xl text-nowrap mt-[154px] md:mb-[130px] md:pt-[104px]">My stack</p>
+      <div
+        class="h-[290px] gap-[46px] flex flex-col md:flex-row md:justify-center md:mx-[35px]"
+      >
+        <!--box1-->
+        <div
+          id="sec2-box-1"
+          class="flex w-[361px] h-[294px] bg-slate-50 border-2 mt-[60px] flex items-center flex-col rounded-lg md:relative"
+        >
+          <div
+            class="flex boxinside-1 w-[96px] h-[96px] border-black border-2 bg-white rounded-full md:absolute md:z-10 md:top-0 md:left-[179px] md:translate-x-[-50%] md:translate-y-[-50%]"
+          ></div>
+          <p
+            class="flex font-medium mt-[29px] pl-[45px] pr-[45px] pt-[70px] text-center"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+            minus neque nihil ver
+          </p>
+        </div>
 
-    <div class="h-[290px] gap-[46px] flex flex-col md:flex-row md:justify-center md:mx-[35px]">
-      <!--box1-->
-      <div id="sec2-box-1" class="flex w-[361px] h-[294px] bg-slate-50 border-2 mt-[60px] flex items-center flex-col rounded-lg md:relative">
-        <div class="flex boxinside-1 w-[96px] h-[96px] border-black border-2 bg-white rounded-full md:absolute md:z-10 md:top-0 md:left-[179px] md:translate-x-[-50%] md:translate-y-[-50%]"></div>
-        <p class="flex font-medium mt-[29px] pl-[45px] pr-[45px] pt-[70px] text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore minus neque nihil ver</p>
-      </div>
+        <!--box2-->
+        <div
+          id="sec2-box-2"
+          class="flex w-[361px] h-[294px] bg-slate-50 border-2 mt-[60px] flex items-center flex-col rounded-lg md:relative"
+        >
+          <div
+            class="flex boxinside-2 w-[96px] h-[96px] border-black border-2 bg-white rounded-full md:absolute md:z-10 md:top-0 md:left-[179px] md:translate-x-[-50%] md:translate-y-[-50%]"
+          ></div>
+          <p
+            class="flex font-medium mt-[29px] pl-[45px] pr-[45px] pt-[70px] text-center"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+            minus neque nihil ver
+          </p>
+        </div>
 
-      <!--box2-->
-      <div id="sec2-box-2" class="flex w-[361px] h-[294px] bg-slate-50 border-2 mt-[60px] flex items-center flex-col rounded-lg md:relative">
-        <div class="flex boxinside-2 w-[96px] h-[96px] border-black border-2 bg-white rounded-full md:absolute md:z-10 md:top-0 md:left-[179px] md:translate-x-[-50%] md:translate-y-[-50%]"></div>
-        <p class="flex font-medium mt-[29px] pl-[45px] pr-[45px] pt-[70px] text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore minus neque nihil ver</p>
+        <!--box3-->
+        <div
+          id="sec2-box-3"
+          class="flex w-[361px] h-[294px] bg-slate-50 border-2 mt-[60px] flex items-center flex-col rounded-lg md:relative"
+        >
+          <div
+            class="flex boxinside-3 w-[96px] h-[96px] border-black border-2 bg-white rounded-full md:absolute md:z-10 md:top-0 md:left-[179px] md:translate-x-[-50%] md:translate-y-[-50%]"
+          ></div>
+          <p
+            class="flex font-medium mt-[29px] pl-[45px] pr-[45px] pt-[70px] text-center"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+            minus neque nihil ver
+          </p>
+        </div>
       </div>
-      
-      <!--box3-->
-      <div id="sec2-box-3" class="flex w-[361px] h-[294px] bg-slate-50 border-2 mt-[60px] flex items-center flex-col rounded-lg md:relative">
-        <div class="flex boxinside-3 w-[96px] h-[96px] border-black border-2 bg-white rounded-full md:absolute md:z-10 md:top-0 md:left-[179px] md:translate-x-[-50%] md:translate-y-[-50%]"></div>
-        <p class="flex font-medium mt-[29px] pl-[45px] pr-[45px] pt-[70px] text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore minus neque nihil ver</p>
-      </div>
-    </div>
     </section>
     <!--end section2-->
 
     <!--start section3-->
-    <section id="section-2" class="bg-[#000000] h-[1200px] flex flex-col items-center text-nowrap md:w-full md:h-[850px] md:flex-row">
-      <div class="md:w-2/5 " id="container-1">
-        <div class="text-[#232E35] pl-[100px]" id="text-box">
+    <section
+      id="section-2"
+      class="bg-[#000000] h-[1200px] flex flex-col items-center text-nowrap md:w-full md:h-[850px] md:flex-row">
+      <div class="md:w-2/5" id="container-1">
+        <div class="text-[#232E35] md:pl-[100px]" id="text-box">
           <div class="flex">
-            <p class="font-bold text-[#656D72] pb-[23px] pl-[33px] pr-[10px]">L e a r n i n g </p>
+            <p class="font-bold text-[#656D72] pb-[23px] pl-[33px] pr-[10px]">
+              L e a r n i n g
+            </p>
             <p class="font-bold text-[#656D72]">P a t h</p>
           </div>
-          <div class="flex space-x-4">  
+          <div class="flex space-x-4">
             <h1 class="font-bold text-5xl text-[#7E74F1]">Education</h1>
             <h1 class="font-bold text-5xl text-slate-400">&</h1>
             <h1 class="font-bold text-5xl text-white">Skills</h1>
-          </div>  
-        </div>
-          <ul class="timeline timeline-snap-icon timeline-vertical mt-[25%] pr-[180px] w-[401px] flex justify-start">
-            <li class="h-[150px]">
-              <div class="timeline-middle">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="#7E74F1"
-                  class="h-5 w-5">
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                    clip-rule="evenodd" />
-                </svg>
-              </div>
-              <div class="timeline-end mb-[65%] text-nowrap text-white">
-                <time class="font-mono italic text-xl">Kusulsuksa School</time>
-                <div class="text-lg">Kindergarden</div>
-                2009-2012
-              </div>
-              <hr />
-            </li>
-            <li class="h-[150px]">
-              <hr />
-              <div class="timeline-middle">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="#7E74F1"
-                  class="h-5 w-5">
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                    clip-rule="evenodd" />
-                </svg>
-              </div>
-              <div class="timeline-end mb-[65%] text-nowrap text-white">
-                <time class="font-mono italic text-xl">Saint Peter Thonburi School</time>
-                <div class="text-lg">Primary School</div>
-                2012-2018
-              </div>
-              <hr />
-            </li>
-            <li class="h-[150px]">
-              <hr />
-              <div class="timeline-middle">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="#7E74F1"
-                  class="h-5 w-5">
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                    clip-rule="evenodd" />
-                </svg>
-              </div>
-              <div class="timeline-end mb-[65%] text-nowrap text-white">
-                <time class="font-mono italic text-xl">Debsirin School</time>
-                <div class="text-lg">Secondary School</div>
-                2018-2024
-              </div>
-            </li>
-          </ul>
-      </div>  
-
-        <div class="md:w-3/5 w-full max-w-md flex flex-col items-center justify-center ml-[10%] text-white">
-          <div class="mb-5 w-full">
-            <span class="block mb-2 text-lg ">HTML (Proficient)</span>
-            <div class="bg-gray-700 rounded-full h-4 overflow-hidden">
-              <div class="bg-purple-500 h-full rounded-full" style="width: 90%;"></div>
-            </div>
-          </div>
-          <div class="mb-5 w-full">
-            <span class="block mb-2 text-lg">CSS (intermediate)</span>
-            <div class="bg-gray-700 rounded-full h-4 overflow-hidden">
-              <div class="bg-purple-500 h-full rounded-full" style="width: 70%;"></div>
-            </div>
-          </div>
-          <div class="mb-5 w-full">
-            <span class="block mb-2 text-lg">JavaScript (Basic)</span>
-            <div class="bg-gray-700 rounded-full h-4 overflow-hidden">
-              <div class="bg-purple-500 h-full rounded-full" style="width: 20%;"></div>
-            </div>
-          </div>
-          <div class="mb-5 w-full">
-            <span class="block mb-2 text-lg">Python (Basic)</span>
-            <div class="bg-gray-700 rounded-full h-4 overflow-hidden">
-              <div class="bg-purple-500 h-full rounded-full" style="width: 30%;"></div>
-            </div>
           </div>
         </div>
+        <ul
+          class="timeline timeline-snap-icon timeline-vertical mt-[25%] pr-[180px] w-[401px] flex justify-start"
+        >
+          <li class="h-[150px]">
+            <div class="timeline-middle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="#7E74F1"
+                class="h-5 w-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div class="timeline-end mb-[65%] text-nowrap text-white">
+              <time class="font-mono italic text-xl">Kusulsuksa School</time>
+              <div class="text-lg">Kindergarden</div>
+              2009-2012
+            </div>
+            <hr />
+          </li>
+          <li class="h-[150px]">
+            <hr />
+            <div class="timeline-middle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="#7E74F1"
+                class="h-5 w-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div class="timeline-end mb-[65%] text-nowrap text-white">
+              <time class="font-mono italic text-xl"
+                >Saint Peter Thonburi School</time
+              >
+              <div class="text-lg">Primary School</div>
+              2012-2018
+            </div>
+            <hr />
+          </li>
+          <li class="h-[150px]">
+            <hr />
+            <div class="timeline-middle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="#7E74F1"
+                class="h-5 w-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div class="timeline-end mb-[65%] text-nowrap text-white">
+              <time class="font-mono italic text-xl">Debsirin School</time>
+              <div class="text-lg">Secondary School</div>
+              2018-2024
+            </div>
+          </li>
+        </ul>
+      </div>
 
+      <div
+        class="md:w-3/5 w-full max-w-md flex flex-col items-center justify-center ml-[10%] text-white"
+      >
+        <div class="mb-5 w-full">
+          <span class="block mb-2 text-lg">HTML (Proficient)</span>
+          <div class="bg-gray-700 rounded-full h-4 overflow-hidden">
+            <div
+              class="bg-purple-500 h-full rounded-full"
+              style="width: 90%"
+            ></div>
+          </div>
+        </div>
+        <div class="mb-5 w-full">
+          <span class="block mb-2 text-lg">CSS (intermediate)</span>
+          <div class="bg-gray-700 rounded-full h-4 overflow-hidden">
+            <div
+              class="bg-purple-500 h-full rounded-full"
+              style="width: 70%"
+            ></div>
+          </div>
+        </div>
+        <div class="mb-5 w-full">
+          <span class="block mb-2 text-lg">JavaScript (Basic)</span>
+          <div class="bg-gray-700 rounded-full h-4 overflow-hidden">
+            <div
+              class="bg-purple-500 h-full rounded-full"
+              style="width: 20%"
+            ></div>
+          </div>
+        </div>
+        <div class="mb-5 w-full">
+          <span class="block mb-2 text-lg">Python (Basic)</span>
+          <div class="bg-gray-700 rounded-full h-4 overflow-hidden">
+            <div
+              class="bg-purple-500 h-full rounded-full"
+              style="width: 30%"
+            ></div>
+          </div>
+        </div>
+        <div class="mb-5 w-full">
+          <span class="block mb-2 text-lg">Version Control : Github</span>
+        </div>
+      </div>
     </section>
     <!--end section3-->
-    
   </body>
   <footer class="bg-[#000000] w-full h-[191px] flex flex-col items-center">
     <div id="icon" class="flex gap-8 mt-[71px]">
-      <box-icon name='gmail' type='logo' color='#7E74F1' ></box-icon>
-      <box-icon type='logo' color="#7E74F1" name='github'></box-icon>
-      <box-icon name='instagram' type='logo' color='#7E74F1' ></box-icon>
+      <box-icon name="gmail" type="logo" color="#7E74F1"></box-icon>
+      <box-icon type="logo" color="#7E74F1" name="github"></box-icon>
+      <box-icon name="instagram" type="logo" color="#7E74F1"></box-icon>
     </div>
     <div class="mt-[27px]">
-      <p class="text-[#7E74F1]">© 2024  -  PC</p>
+      <p class="text-[#7E74F1]">© 2024 - PC</p>
     </div>
   </footer>
+</html>
