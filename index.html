@@ -18,7 +18,7 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <navbar class="md:flex w-full z-20 fixed">
+    <navbar class="flex w-full z-20 fixed">
       <div class="navbar bg-black flex items-center p-4">
         <div class="flex-none">
           <button
@@ -37,23 +37,25 @@
           id="navbar-links"
         >
           <a href="./aboutme.html">About</a>
-          <a href="#portfolio">Portfolio</a>
+          <a href="./portfolio.html">Portfolio</a>
           <a href="./contact.html">Contact</a>
         </div>
-        <a href="./index.html">
-          <button
-            class="btn glass bg-white text-[#7E74F1] mr-5 px-6 font-bold hidden md:flex"
-          >
-            Home
-          </button>
-        </a>
+        <div class="hidden md:flex ml-auto">
+          <a href="./index.html">
+            <button
+              class="btn glass bg-white text-[#7E74F1] mr-5 px-6 font-bold"
+            >
+              Home
+            </button>
+          </a>
+        </div>
       </div>
       <div
         class="top-[60px] fixed z-20 bg-slate-300 md:hidden flex-col text-center text-black font-bold w-[100px] ml-[10px]"
         id="mobile-menu"
       >
         <a href="./aboutme.html">About</a>
-        <a href="#portfolio">Portfolio</a>
+        <a href="./portfolio.html">Portfolio</a>
         <a href="./contact.html">Contact</a>
       </div>
     </navbar>
@@ -124,7 +126,7 @@
           class="flex w-[361px] h-[294px] bg-slate-50 mt-[60px] flex items-center flex-col rounded-lg"
         >
           <div
-            class="flex boxinside-1 w-[56px] h-[56px] mt-[53px] bg-slate-200 rounded-lg items-center justify-center"
+            class="flex boxinside-1 w-[56px] h-[56px] mt-[53px]"
           >
             <box-icon
               name="code-alt"
@@ -144,7 +146,7 @@
           class="flex w-[361px] h-[294px] bg-slate-50 mt-[60px] flex items-center flex-col rounded-lg"
         >
           <div
-            class="flex boxinside-2 w-[56px] h-[56px] mt-[53px] bg-slate-200 bg-white rounded-lg"
+            class="flex boxinside-2 w-[56px] h-[56px] mt-[53px]"
           >
             <box-icon
               name="question-mark"
@@ -164,7 +166,7 @@
           class="flex w-[361px] h-[294px] bg-slate-50 mt-[60px] flex items-center flex-col rounded-lg"
         >
           <div
-            class="flex boxinside-3 w-[56px] h-[56px] mt-[53px] bg-slate-200 bg-white rounded-lg"
+            class="flex boxinside-3 w-[56px] h-[56px] mt-[53px]"
           >
             <box-icon
               type="solid"

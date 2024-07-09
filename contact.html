@@ -18,7 +18,7 @@
     <title>Contact</title>
   </head>
   <body>
-    <navbar class="md:flex w-full z-20 fixed">
+    <navbar class="flex w-full z-20 fixed">
         <div class="navbar bg-black flex items-center p-4">
           <div class="flex-none">
             <button
@@ -37,26 +37,35 @@
             id="navbar-links"
           >
             <a href="./aboutme.html">About</a>
-            <a href="#portfolio">Portfolio</a>
+            <a href="./portfolio.html">Portfolio</a>
             <a href="./contact.html">Contact</a>
           </div>
-          <a href="./index.html">
-            <button
-              class="btn glass bg-white text-[#7E74F1] mr-5 px-6 font-bold hidden md:flex"
-            >
-              Home
-            </button>
-          </a>
+          <div class="hidden md:flex ml-auto">
+            <a href="./index.html">
+              <button
+                class="btn glass bg-white text-[#7E74F1] mr-5 px-6 font-bold"
+              >
+                Home
+              </button>
+            </a>
+          </div>
         </div>
         <div
           class="top-[60px] fixed z-20 bg-slate-300 md:hidden flex-col text-center text-black font-bold w-[100px] ml-[10px]"
           id="mobile-menu"
         >
+          <a href="./index.html">Home</a></br>
           <a href="./aboutme.html">About</a>
-          <a href="#portfolio">Portfolio</a>
+          <a href="./portfolio.html">Portfolio</a>
           <a href="./contact.html">Contact</a>
         </div>
       </navbar>
+      <script>
+        function hideShow() {
+          const mobilemenu = document.getElementById("mobile-menu");
+          mobilemenu.classList.toggle("hidden");
+        }
+      </script>
     <div class="hero bg-base-200 min-h-screen">
         <div class="hero-content text-center">
           <div class="max-w-md">
@@ -70,3 +79,13 @@
         </div>
       </div>
   </body>
+  <footer class="bg-[#000000] w-full h-[191px] flex flex-col items-center">
+    <div id="icon" class="flex gap-8 mt-[71px]">
+      <box-icon name="gmail" type="logo" color="#7E74F1"></box-icon>
+      <box-icon type="logo" color="#7E74F1" name="github"></box-icon>
+      <box-icon name="instagram" type="logo" color="#7E74F1"></box-icon>
+    </div>
+    <div class="mt-[27px]">
+      <p class="text-[#7E74F1]">© 2024 - PC</p>
+    </div>
+  </footer>
