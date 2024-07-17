@@ -1,91 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link href="aboutme.html"/>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <title>Contact</title>
-  </head>
-  <body>
-    <navbar class="flex w-full z-20 fixed">
-        <div class="navbar bg-black flex items-center p-4">
-          <div class="flex-none">
-            <button
-              onclick="hideShow()"
-              class="btn btn-square btn-ghost md:hidden"
-              id="menu-button"
-            >
-              <box-icon name="menu" color="#7e74f1"></box-icon>
-            </button>
-          </div>
-          <div class="flex-1">
-            <a class="btn btn-ghost text-xl text-white">Paullor</a>
-          </div>
-          <div
-            class="hidden md:flex md:gap-[120px] text-white font-bold justify-center w-full"
-            id="navbar-links"
-          >
-            <a href="./aboutme.html">About</a>
-            <a href="./portfolio.html">Portfolio</a>
-            <a href="./contact.html">Contact</a>
-          </div>
-          <div class="hidden md:flex ml-auto">
-            <a href="./index.html">
-              <button
-                class="btn glass bg-white text-[#7E74F1] mr-5 px-6 font-bold"
-              >
-                Home
-              </button>
-            </a>
-          </div>
-        </div>
-        <div
-          class="top-[60px] fixed z-20 bg-slate-300 md:hidden flex-col text-center text-black font-bold w-[100px] ml-[10px]"
-          id="mobile-menu"
-        >
-          <a href="./index.html">Home</a></br>
-          <a href="./aboutme.html">About</a>
-          <a href="./portfolio.html">Portfolio</a>
-          <a href="./contact.html">Contact</a>
-        </div>
-      </navbar>
-      <script>
-        function hideShow() {
-          const mobilemenu = document.getElementById("mobile-menu");
-          mobilemenu.classList.toggle("hidden");
-        }
-      </script>
-    <div class="hero bg-base-200 min-h-screen">
-        <div class="hero-content text-center">
-          <div class="max-w-md">
-            <h1 class="text-5xl font-bold">Hello there</h1>
-            <p class="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-              quasi. In deleniti eaque aut repudiandae et a id nisi.
-            </p>
-            <button class="btn btn-primary">Get Started</button>
-          </div>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <link href="aboutme.html" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <title>Contact</title>
+</head>
+
+<body>
+  <navbar class="flex w-full z-20 fixed">
+    <div class="navbar bg-black flex items-center p-4">
+      <div class="flex-none">
+        <button onclick="hideShow()" class="btn btn-square btn-ghost md:hidden" id="menu-button">
+          <box-icon name="menu" color="#7e74f1"></box-icon>
+        </button>
       </div>
-  </body>
-  <footer class="bg-[#000000] w-full h-[191px] flex flex-col items-center">
-    <div id="icon" class="flex gap-8 mt-[71px]">
-      <box-icon name="gmail" type="logo" color="#7E74F1"></box-icon>
-      <box-icon type="logo" color="#7E74F1" name="github"></box-icon>
-      <box-icon name="instagram" type="logo" color="#7E74F1"></box-icon>
+      <div class="flex-1">
+        <p class="btn btn-ghost text-xl text-white"><a href="index.html">Paullor</a></p>
+      </div>
+      <div class="hidden md:flex md:gap-[120px] text-white font-bold justify-center w-full" id="navbar-links">
+        <a href="./aboutme.html">About</a>
+        <a href="./portfolio.html">Portfolio</a>
+        <a href="./contact.html">Contact</a>
+      </div>
     </div>
-    <div class="mt-[27px]">
-      <p class="text-[#7E74F1]">© 2024 - PC</p>
+    <div
+      class="top-[60px] fixed z-20 bg-slate-300 md:hidden flex-col text-center text-black font-bold w-[100px] ml-[10px]"
+      id="mobile-menu">
+      <a href="./index.html">Home</a></br>
+      <a href="./aboutme.html">About</a>
+      <a href="./portfolio.html">Portfolio</a>
+      <a href="./contact.html">Contact</a>
     </div>
-  </footer>
+  </navbar>
+  <script>
+    function hideShow() {
+      const mobilemenu = document.getElementById("mobile-menu");
+      mobilemenu.classList.toggle("hidden");
+    }
+  </script>
+  <div class="hero bg-base-200 min-h-screen bg-black ">
+    <div class="hero-content text-center text-[#7E74F1] flex flex-col">
+      <h1 class="text-9xl font-bold flex text-nowrap mb-[50px]">Get in touch</h1>
+      <div class="justify-center flex gap-[50px]">
+
+        <div class="paullor flex justify-center gap-2 relative">
+          <box-icon type='logo' color="#7E74F1" name='instagram' onclick="hideShowText('paul')"
+            class="flex"></box-icon>
+          <p class="font-extrabold text-[#7E74F1] hidden" id="paul">__paullor__</p>
+        </div>
+
+        <div class="flex justify-center gap-2 relative">
+          <box-icon type='logo' color="#7E74F1" name='gmail' onclick="hideShowText('email')"
+            class="flex"></box-icon>
+          <p class="font-extrabold text-[#7E74F1] hidden" id="email">pongthum@gmail.com</p>
+        </div>
+
+        <div class="flex justify-center gap-2 relative">
+          <box-icon name='github' type='logo' color='#7e74f1' onclick="hideShowText('github')"
+            class="flex"></box-icon>
+          <p class="font-extrabold text-[#7E74F1] hidden" id="github">Paullor08</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function hideShowText(id) {
+      const element = document.getElementById(id);
+      element.classList.toggle("hidden");
+    }
+  </script>
+
+  </div>
+  </div>
+  </div>
+  </div>
+</body>
