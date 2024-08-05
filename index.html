@@ -1,274 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link href="aboutme.html" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <title>Portfolio</title>
-  </head>
 
-  <body>
-    <navbar class="flex w-full z-20 fixed">
-      <div class="navbar bg-black flex items-center p-4">
-        <div class="flex-none">
-          <button
-            onclick="hideShow()"
-            class="btn btn-square btn-ghost md:hidden"
-            id="menu-button"
-          >
-            <box-icon name="menu" color="#7e74f1"></box-icon>
-          </button>
-        </div>
-        <div class="flex-1">
-          <p class="btn btn-ghost text-xl text-white">
-            <a href="index.html">Paullor</a>
-          </p>
-        </div>
-        <div
-          class="hidden md:flex md:gap-[120px] text-white font-bold justify-center w-full"
-          id="navbar-links"
-        >
-          <a href="./aboutme.html">About</a>
-          <a href="./portfolio.html">Portfolio</a>
-          <a href="./contact.html">Contact</a>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <link href="aboutme.html" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <title>Portfolio</title>
+</head>
+
+<body>
+  <navbar class="flex w-full z-20 fixed">
+    <div class="navbar bg-black flex items-center p-4">
+      <div class="flex-none">
+        <button onclick="hideShow()" class="btn btn-square btn-ghost md:hidden" id="menu-button">
+          <box-icon name="menu" color="#7e74f1"></box-icon>
+        </button>
       </div>
-      <div
-        class="top-[60px] fixed z-20 bg-slate-300 md:hidden flex-col text-center text-black font-bold w-[100px] ml-[10px]"
-        id="mobile-menu"
-      >
+      <div class="flex-1">
+        <p class="btn btn-ghost text-xl text-white">
+          <a href="index.html">Paullor</a>
+        </p>
+      </div>
+      <div class="hidden md:flex md:gap-[120px] text-white font-bold justify-center w-full" id="navbar-links">
         <a href="./aboutme.html">About</a>
         <a href="./portfolio.html">Portfolio</a>
         <a href="./contact.html">Contact</a>
       </div>
-    </navbar>
-    <script>
-      function hideShow() {
-        const mobilemenu = document.getElementById("mobile-menu");
-        mobilemenu.classList.toggle("hidden");
-      }
-    </script>
+    </div>
+    <div
+      class="top-[60px] fixed z-20 bg-slate-300 md:hidden flex-col text-center text-black font-bold rounded-xl w-[100px] ml-[10px]"
+      id="mobile-menu">
+      <a href="./aboutme.html">About</a>
+      <a href="./portfolio.html">Portfolio</a>
+      <a href="./contact.html">Contact</a>
+    </div>
+  </navbar>
+  <script>
+    function hideShow() {
+      const mobilemenu = document.getElementById("mobile-menu");
+      mobilemenu.classList.toggle("hidden");
+    }
+  </script>
 
-    <!-- Start first section -->
+  <!-- Start first section -->
 
-    <section-1
-      class="w-full h-[1010px] flex justify-center md:w-full md:h-[770px] bg-black md:flex md:items-center md:justify-center"
-    >
-      <div class="flex flex-col items-center mt-[125px] md:ml-6 md:mb-[248px]">
+  <section-1
+    class="w-full h-[700px] flex justify-center pr-[30px] md:w-full md:h-[770px] bg-black md:items-center lg:h-[990px]">
+    <div class="flex flex-col items-center mt-[125px] md:ml-6 md:mb-[248px]">
         <img
-          class="w-[336px] h-[400px] border-2 border-black rounded-xl md:hidden md:rounded-xl"
-          src="https://img2.pic.in.th/pic/428eb9d2761ee2e465.jpg"
-        />
-        <p
-          class="opacity-80 flex mt-[52px] mb-[41px] font-bold text-white text-xl md:pb-[72px]"
-        >
-          MY NAME IS
-        </p>
-        <div class="flex flex-col mb-[53px] font-extrabold sm:flex-row">
-          <h1
-            class="text-white flex text-5xl md:text-4xl lg:text-5xl pb-[15px]"
-          >
-            Pongthum
-          </h1>
-          <h1
-            class="flex text-5xl ml-2 md:text-4xl lg:text-5xl"
-            style="color: #7e74f1"
-          >
-            Chotichai
-          </h1>
-        </div>
-        <p class="font-medium text-white text-sm mx-[2%] md:pt-4">
-          "Welcome to Pongthum Chotichai's Coding Journey! Dive into my world
-          where curiosity meets code. Discover insights, tips, and projects
-          reflecting my passion for coding, nurtured since a transformative
-          school leadership camp. From Python challenges to web development
-          adventures, join me in exploring the art and science of programming."
-        </p>
-      </div>
-      <img
-        class="ml-[3%] mr-4 w-full max-w-[545px] h-auto hidden md:flex md:w-[545px] md:h-[496px] md:rounded-xl"
-        src="https://img2.pic.in.th/pic/428eb9d2761ee2e465.jpg"
-        alt="My Image"
-      />
-    </section-1>
-
-    <!-- End first section -->
-
-    <!-- Start Section 2 -->
-
-    <section
-      id="section-2"
-      class="w-full h-[1485px] bg-black flex flex-col items-center py-32 md:w-full md:h-auto md:h-[900px]"
-    >
-      <h1 class="font-extrabold text-4xl text-white">Specialized in</h1>
-
-      <div
-        class="flex flex-col items-center md:flex md:flex-col md:items-center md:gap-[60px] lg:flex lg:flex-row lg:w-full lg:justify-center"
-      >
-        <!--box1-->
-        <div
-          id="sec2-box-1"
-          class="flex w-[361px] h-[294px] bg-slate-50 mt-[60px] flex items-center flex-col rounded-lg"
-        >
-          <div class="flex boxinside-1 w-[56px] h-[56px] mt-[53px]">
-            <box-icon
-              name="code-alt"
-              color="#7e74f1"
-              class="w-[55px] h-[55px]"
-            ></box-icon>
-          </div>
-          <p class="flex font-bold text-2xl mt-[25px]">Coding</p>
-          <p class="flex font-medium mt-[29px] pl-[45px] pr-[45px] text-center">
-            "Passinate in Coding, Skillful in many tech-stacks"
-          </p>
-        </div>
-
-        <!--box2-->
-        <div
-          id="sec2-box-2"
-          class="flex w-[361px] h-[294px] bg-slate-50 mt-[60px] flex items-center flex-col rounded-lg"
-        >
-          <div class="flex boxinside-2 w-[56px] h-[56px] mt-[53px]">
-            <box-icon
-              name="question-mark"
-              color="#7E74F1"
-              class="w-[55px] h-[55px]"
-            ></box-icon>
-          </div>
-          <p class="flex font-bold text-2xl mt-[25px]">Problem Solving</p>
-          <p class="flex font-medium mt-[29px] pl-[45px] pr-[45px] text-center">
-            "Keeping calm when meet the Problem and solve it carefully"
-          </p>
-        </div>
-
-        <!--box3-->
-        <div
-          id="sec2-box-3"
-          class="flex w-[361px] h-[294px] bg-slate-50 mt-[60px] flex items-center flex-col rounded-lg"
-        >
-          <div class="flex boxinside-3 w-[56px] h-[56px] mt-[53px]">
-            <box-icon
-              type="solid"
-              name="book-bookmark"
-              color="#7E74F1"
-              class="w-[55px] h-[55px]"
-            ></box-icon>
-          </div>
-          <p class="flex font-bold text-2xl mt-[25px]">Self-Learning</p>
-          <p class="flex font-medium mt-[29px] pl-[45px] pr-[45px] text-center">
-            "Love to spend many hours to learn Tech skills"
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- End Section 2 -->
-
-    <!-- Start Section 3 -->
-
-    <section
-      id="section-3"
-      class="w-full h-[1500px] bg-[#000000] flex flex-col items-center md:w-full md:h-[2100px] md:py-16 lg:w-full lg:h-[915px]"
-    >
-      <div class="flex justify-center pt-[104px]">
-        <p class="font-extrabold text-4xl text-white">Featured Portfolio</p>
-      </div>
-
-      <div
-        class="w-[361px] h-[294px] md:flex md:flex-col md:gap-[60px] md:h-auto lg:flex-row lg:justify-center lg:w-full"
-      >
-        <div
-          id="sec3-box-1"
-          class="rounded-lg w-full h-[294px] border-2 border-white mt-[113px] flex flex-col justify-end lg:w-[361px]"
-        >
-          <div id="square-box" class="w-full h-[107px] bg-white">
-            <p>123</p>
-          </div>
-        </div>
-        <div
-          id="sec3-box-2"
-          class="rounded-lg w-full h-[294px] border-2 border-white mt-[113px] flex flex-col justify-end lg:w-[361px]"
-        >
-          <div id="square-box" class="w-full h-[107px] bg-white">
-            <p>123</p>
-          </div>
-        </div>
-
-        <div
-          id="sec3-box-3"
-          class="rounded-lg w-full h-[294px] border-2 border-white mt-[113px] flex flex-col justify-end mt-[108px] lg:w-[361px]"
-        >
-          <div id="square-box" class="w-full h-[107px] bg-white">
-            <p>123</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- End Section 3 -->
-
-    <!-- Start Section 4 -->
-
-    <section
-      id="section-4"
-      class="w-full h-[2300px] bg-black py-16 flex flex-col items-center md:h-[2300px] lg:h-[915px]"
-    >
-      <div class="flex justify-center">
-        <h1 class="font-extrabold text-4xl mt-[115px] text-white">
-          Personal Blog
+          class="w-[136px] h-[200px] rounded-xl object-contain border-2 border-black rounded-xl md:hidden md:rounded-xl lg:w-[336px] lg:h-[400px]"
+          src="https://img2.pic.in.th/pic/428eb9d2761ee2e465.jpg" />
+      <p class="opacity-80 flex  font-bold text-white text-xs lg:text-xl md:pb-[72px] lg:mt-[52px] lg:mb-[41px]">
+        MY NAME IS
+      </p>
+      <div class="flex flex-col mb-[20px] items-center mt-[20px] font-extrabold sm:flex-row lg:mb-[53px]">
+        <h1 class="text-white flex text-3xl lg:text-5xl pb-[5px] lg:pb-[15px]">
+          Pongthum
+        </h1>
+        <h1 class="flex text-4xl ml-2 lg:text-5xl lg:text-5xl" style="color: #7e74f1">
+          Chotichai
         </h1>
       </div>
+      <p class="w-[150px] font-medium text-center text-white text-[10px] mx-[2%] md:pt-4 lg:text-sm lg:w-[300px]">
+        "Welcome to Pongthum Chotichai's Coding Journey! Dive into my world
+        where curiosity meets code. Discover insights, tips, and projects
+        reflecting my passion for coding, nurtured since a transformative
+        school leadership camp. From Python challenges to web development
+        adventures, join me in exploring the art and science of programming."
+      </p>
+    </div>
+    <img class="ml-[150px] w-full max-w-[545px] h-auto hidden md:flex md:w-[545px] md:h-[496px] md:rounded-xl"
+      src="https://img2.pic.in.th/pic/428eb9d2761ee2e465.jpg" alt="My Image" />
+  </section-1>
 
-      <div
-        class="flex flex-col items-center md:full md:flex md:flex-col md:gap-[60px] lg:flex-row lg:justify-center lg:w-full"
-      >
-        <div
-          id="sec4-box-2"
-          class="rounded-lg w-[361px] h-[420px] mt-[113px] border-white border-2 mt-[98px] md:w-[361px]"
-        >
-          <img
-            class="w-full h-[243px]"
-            src="https://img5.pic.in.th/file/secure-sv1/fatboy.jpg"
-          />
-          <p class="text-white flex justify-center mt-[60px]">
-            <a href="/42blog.html">Learn more</a>
-          </p>
+  <!-- End first section -->
+
+  <!-- Start Section 2 -->
+
+  <section id="section-2"
+    class="w-full h-[1485px] bg-black flex flex-col items-center py-32 md:w-full md:h-auto md:h-[900px]">
+    <h1 class="font-extrabold text-2xl lg:text-4xl text-white">Specialized in</h1>
+
+    <div
+      class="flex flex-col items-center md:flex md:flex-col md:items-center md:gap-[60px] lg:flex lg:flex-row lg:w-full lg:justify-center">
+
+      <!--box1-->
+      <div id="sec2-box-1" class="flex w-[261px] h-[210px] bg-slate-50 mt-[60px] flex items-center flex-col rounded-lg lg:w-[361px] lg:h-[294px]">
+        <div class="flex boxinside-1 w-[26px] h-[26px] mt-[23px] lg:w-[56px] lg:h-[56px] lg:mt-[53px]">
+          <box-icon name="code-alt" color="#7e74f1" class="w-[25px] h-[25px] lg:w-[55px] lg:h-[55px]"></box-icon>
         </div>
+        <p class="flex font-bold text-sm lg:text-2xl mt-[25px]">Coding</p>
+        <p class="flex font-medium mt-[29px] pl-[45px] pr-[45px] text-sm text-2xl text-center">
+          "Passinate in Coding, Skillful in many tech-stacks"
+        </p>
+      </div>
 
-        <div
-          id="sec4-box-3"
-          class="rounded-lg w-[361px] h-[420px] mt-[113px] border-white border-2 mt-[98px] md:w-[361px]"
-        >
-          <img
-            class="w-full h-[243px]"
-            src="https://img5.pic.in.th/file/secure-sv1/fatboy.jpg"
-          />
-          <p class="text-white flex justify-center mt-[60px]">
-            <a href>Learn more</a>
-          </p>
+      <!--box2-->
+      <div id="sec2-box-2" class="flex w-[361px] h-[294px] bg-slate-50 mt-[60px] flex items-center flex-col rounded-lg">
+        <div class="flex boxinside-2 w-[56px] h-[56px] mt-[53px]">
+          <box-icon name="question-mark" color="#7E74F1" class="w-[55px] h-[55px]"></box-icon>
+        </div>
+        <p class="flex font-bold text-2xl mt-[25px]">Problem Solving</p>
+        <p class="flex font-medium mt-[29px] pl-[45px] pr-[45px] text-center">
+          "Keeping calm when meet the Problem and solve it carefully"
+        </p>
+      </div>
+
+      <!--box3-->
+      <div id="sec2-box-3" class="flex w-[361px] h-[294px] bg-slate-50 mt-[60px] flex items-center flex-col rounded-lg">
+        <div class="flex boxinside-3 w-[56px] h-[56px] mt-[53px]">
+          <box-icon type="solid" name="book-bookmark" color="#7E74F1" class="w-[55px] h-[55px]"></box-icon>
+        </div>
+        <p class="flex font-bold text-2xl mt-[25px]">Self-Learning</p>
+        <p class="flex font-medium mt-[29px] pl-[45px] pr-[45px] text-center">
+          "Love to spend many hours to learn Tech skills"
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- End Section 2 -->
+
+  <!-- Start Section 3 -->
+
+  <section id="section-3"
+    class="w-full h-[1500px] bg-[#000000] flex flex-col items-center md:w-full md:h-[2100px] md:py-16 lg:w-full lg:h-[915px]">
+    <div class="flex justify-center pt-[104px]">
+      <p class="font-extrabold text-4xl text-white">Featured Portfolio</p>
+    </div>
+
+    <div
+      class="w-[361px] h-[294px] md:flex md:flex-col md:gap-[60px] md:h-auto lg:flex-row lg:justify-center lg:w-full">
+      <div id="sec3-box-1"
+        class="rounded-lg w-full h-[294px] border-2 border-white mt-[113px] flex flex-col justify-end lg:w-[361px]">
+        <div id="square-box" class="w-full h-[107px] bg-white">
+          <p>123</p>
         </div>
       </div>
-    </section>
-  </body>
-  <footer class="bg-[#000000] w-full h-[191px] flex flex-col items-center">
-    <div id="icon" class="flex gap-8 mt-[71px]">
-      <box-icon name="gmail" type="logo" color="#7E74F1"></box-icon>
-      <box-icon type="logo" color="#7E74F1" name="github"></box-icon>
-      <box-icon name="instagram" type="logo" color="#7E74F1"></box-icon>
+      <div id="sec3-box-2"
+        class="rounded-lg w-full h-[294px] border-2 border-white mt-[113px] flex flex-col justify-end lg:w-[361px]">
+        <div id="square-box" class="w-full h-[107px] bg-white">
+          <p>123</p>
+        </div>
+      </div>
+
+      <div id="sec3-box-3"
+        class="rounded-lg w-full h-[294px] border-2 border-white mt-[113px] flex flex-col justify-end mt-[108px] lg:w-[361px]">
+        <div id="square-box" class="w-full h-[107px] bg-white">
+          <p>123</p>
+        </div>
+      </div>
     </div>
-    <div class="mt-[27px]">
-      <p class="text-[#7E74F1]">© 2024 - PC</p>
+  </section>
+
+  <!-- End Section 3 -->
+
+  <!-- Start Section 4 -->
+
+  <section id="section-4"
+    class="w-full h-[2300px] bg-black py-16 flex flex-col items-center md:h-[2300px] lg:h-[915px]">
+    <div class="flex justify-center">
+      <h1 class="font-extrabold text-4xl mt-[115px] text-white">
+        Personal Blog
+      </h1>
     </div>
-  </footer>
+
+    <div
+      class="flex flex-col items-center md:full md:flex md:flex-col md:gap-[60px] lg:flex-row lg:justify-center lg:w-full">
+      <div id="sec4-box-2"
+        class="rounded-lg w-[361px] h-[420px] mt-[113px] border-white border-2 mt-[98px] md:w-[361px]">
+        <img class="w-full h-[243px]" src="https://img5.pic.in.th/file/secure-sv1/fatboy.jpg" />
+        <p class="text-white flex justify-center mt-[60px]">
+          <a href="/42blog.html">Learn more</a>
+        </p>
+      </div>
+
+      <div id="sec4-box-3"
+        class="rounded-lg w-[361px] h-[420px] mt-[113px] border-white border-2 mt-[98px] md:w-[361px]">
+        <img class="w-full h-[243px]" src="https://img5.pic.in.th/file/secure-sv1/fatboy.jpg" />
+        <p class="text-white flex justify-center mt-[60px]">
+          <a href>Learn more</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</body>
+<footer class="bg-[#000000] w-full h-[191px] flex flex-col items-center">
+  <div id="icon" class="flex gap-8 mt-[71px]">
+    <box-icon name="gmail" type="logo" color="#7E74F1"></box-icon>
+    <box-icon type="logo" color="#7E74F1" name="github"></box-icon>
+    <box-icon name="instagram" type="logo" color="#7E74F1"></box-icon>
+  </div>
+  <div class="mt-[27px]">
+    <p class="text-[#7E74F1]">© 2024 - PC</p>
+  </div>
+</footer>
+
 </html>
