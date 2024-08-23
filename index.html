@@ -27,7 +27,7 @@
       </div>
       <div class="hidden md:flex md:gap-[120px] text-white font-bold justify-center w-full" id="navbar-links">
         <a href="./aboutme.html">About</a>
-        <a href="./portfolio.html">Portfolio</a>
+        <a href="./portfolio.html">Achievement</a>
         <a href="./contact.html">Contact</a>
       </div>
     </div>
@@ -35,7 +35,7 @@
       class="top-[60px] fixed z-20 bg-slate-300 md:hidden flex-col text-center text-black font-bold rounded-xl w-[100px] ml-[10px]"
       id="mobile-menu">
       <a href="./aboutme.html">About</a>
-      <a href="./portfolio.html">Portfolio</a>
+      <a href="./portfolio.html">Achievement</a>
       <a href="./contact.html">Contact</a>
     </div>
   </navbar>
@@ -44,6 +44,34 @@
       const mobilemenu = document.getElementById("mobile-menu");
       mobilemenu.classList.toggle("hidden");
     }
+    document.addEventListener('click', function(event) {
+    const menuButton = document.getElementById("menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    if (!mobileMenu.contains(event.target) && !menuButton.contains(event.target)) {
+      mobileMenu.classList.add("hidden");
+    }
+  });
+  </script>
+  <button onclick="scrollToTop()" id="scrollTopBtn"
+    class="hidden fixed bottom-4 right-4 bg-blue-500 text-white p-2 rounded-full">
+    ↑ Top
+  </button>
+
+  <script>
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        document.getElementById("scrollTopBtn").classList.remove("hidden");
+      } else {
+        document.getElementById("scrollTopBtn").classList.add("hidden");
+      }
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   </script>
 
   <!-- Start first section -->
@@ -51,9 +79,9 @@
   <section-1
     class="w-full h-[800px] flex justify-center pr-[30px] md:w-full md:h-[770px] bg-black md:items-center lg:h-[990px]">
     <div class="flex flex-col items-center mt-[125px] md:ml-6 md:mb-[248px]">
-        <img
-          class="w-[156px] h-[256px] rounded-xl object-contain border-2 border-black rounded-xl md:hidden md:rounded-xl lg:w-[336px] lg:h-[400px]"
-          src="https://img2.pic.in.th/pic/428eb9d2761ee2e465.jpg" />
+      <img
+        class="w-[156px] h-[256px] rounded-xl object-contain border-2 border-black rounded-xl md:hidden md:rounded-xl lg:w-[336px] lg:h-[400px]"
+        src="https://img2.pic.in.th/pic/428eb9d2761ee2e465.jpg" />
       <p class="opacity-80 flex  font-bold text-white text-xs lg:text-xl md:pb-[72px] lg:mt-[52px] lg:mb-[41px]">
         MY NAME IS
       </p>
@@ -83,13 +111,15 @@
 
   <section id="section-2"
     class="w-full h-[1000px] bg-black flex flex-col items-center py-32 md:w-full md:h-auto md:h-[900px]">
-    <h1 class="font-extrabold text-2xl lg:text-4xl text-white">Specialized in</h1>
+    <h1 class="font-extrabold text-2xl lg:text-4xl text-white">Specialized
+      in</h1>
 
     <div
       class="flex flex-col items-center md:flex md:flex-col md:items-center md:gap-[60px] lg:flex lg:flex-row lg:w-full lg:justify-center">
 
       <!--box1-->
-      <div id="sec2-box-1" class="flex w-[261px] h-[210px] bg-slate-50 mt-[60px] flex items-center flex-col rounded-lg lg:w-[361px] lg:h-[294px]">
+      <div id="sec2-box-1"
+        class="flex w-[261px] h-[210px] bg-slate-50 mt-[60px] flex items-center flex-col rounded-lg lg:w-[361px] lg:h-[294px]">
         <div class="flex boxinside-1 w-[26px] h-[26px] mt-[23px] lg:w-[56px] lg:h-[56px] lg:mt-[53px]">
           <box-icon name="code-alt" color="#7e74f1" class="w-[25px] h-[25px] lg:w-[55px] lg:h-[55px]"></box-icon>
         </div>
@@ -100,18 +130,21 @@
       </div>
 
       <!--box2-->
-      <div id="sec2-box-2" class="flex w-[261px] h-[210px] bg-slate-50 mt-[60px] flex items-center flex-col rounded-lg lg:w-[361px] lg:h-[294px]">
+      <div id="sec2-box-2"
+        class="flex w-[261px] h-[210px] bg-slate-50 mt-[60px] flex items-center flex-col rounded-lg lg:w-[361px] lg:h-[294px]">
         <div class="flex boxinside-1 w-[26px] h-[26px] mt-[23px] lg:w-[56px] lg:h-[56px] lg:mt-[53px]">
           <box-icon name="question-mark" color="#7E74F1" class="w-[55px] h-[55px]"></box-icon>
         </div>
-        <p class="flex font-bold text-sm lg:text-2xl mt-[25px]">Problem Solving</p>
+        <p class="flex font-bold text-sm lg:text-2xl mt-[25px]">Problem
+          Solving</p>
         <p class="flex font-medium mt-[29px] pl-[45px] pr-[45px] text-sm text-2xl text-center">
           "Keeping calm when meet the Problem and solve it carefully"
         </p>
       </div>
 
       <!--box3-->
-      <div id="sec2-box-3" class="flex w-[261px] h-[210px] bg-slate-50 mt-[60px] flex items-center flex-col rounded-lg lg:w-[361px] lg:h-[294px]">
+      <div id="sec2-box-3"
+        class="flex w-[261px] h-[210px] bg-slate-50 mt-[60px] flex items-center flex-col rounded-lg lg:w-[361px] lg:h-[294px]">
         <div class="flex boxinside-1 w-[26px] h-[26px] mt-[23px] lg:w-[56px] lg:h-[56px] lg:mt-[53px]">
           <box-icon type="solid" name="book-bookmark" color="#7E74F1" class="w-[55px] h-[55px]"></box-icon>
         </div>
@@ -130,7 +163,8 @@
   <section id="section-3"
     class="w-full h-[1300px] bg-[#000000] flex flex-col items-center justify-center md:h-[2100px] md:py-16 lg:w-full lg:h-[915px]">
     <div class="flex justify-center pt-[104px]">
-      <p class="font-extrabold text-2xl lg:text-4xl text-white">Featured Portfolio</p>
+      <p class="font-extrabold text-2xl lg:text-4xl text-white">Featured
+        Portfolio</p>
     </div>
     <div class="lg:flex lg:gap-[50px]">
       <div id="sec3-box-1"
@@ -159,8 +193,7 @@
 
   <!-- Start Section 4 -->
 
-  <section id="section-4"
-    class="w-full h-[1000px] bg-black py-16 flex flex-col items-center lg:h-[915px]">
+  <section id="section-4" class="w-full h-[1000px] bg-black py-16 flex flex-col items-center lg:h-[915px]">
     <div class="flex justify-center">
       <h1 class="font-extrabold text-2xl lg:mt-[115px] text-white">
         Personal Blog
@@ -171,7 +204,8 @@
       class="flex flex-col items-center md:full md:flex md:flex-col md:gap-[60px] lg:flex-row lg:justify-center lg:w-full">
       <div id="sec4-box-1"
         class="rounded-lg w-[261px] h-[250px] mt-[113px] border-white border-2 mt-[98px] lg:w-[400px] lg:h-[450px]">
-        <img class="w-[261px] h-[143px] lg:w-[400px] lg:h-[321px] rounded-lg" src="https://img5.pic.in.th/file/secure-sv1/42pf92f81990c141c35.jpg" />
+        <img class="w-[261px] h-[143px] lg:w-[400px] lg:h-[321px] rounded-lg"
+          src="https://img5.pic.in.th/file/secure-sv1/42pf92f81990c141c35.jpg" />
         <p class="text-white flex justify-center mt-[60px]">
           <a href="/42blog.html">Learn more</a>
         </p>
@@ -182,10 +216,11 @@
 </body>
 <footer class="bg-[#000000] w-full h-[191px] flex flex-col items-center">
   <div id="icon" class="flex gap-8 mt-[71px]">
-    <box-icon name="gmail" type="logo" color="#7E74F1"></box-icon>
-    <box-icon type="logo" color="#7E74F1" name="github"></box-icon>
-    <box-icon name="instagram" type="logo" color="#7E74F1"></box-icon>
+    <box-icon name="gmail" type="logo" color="#7E74F1" title="Gmail"></box-icon>
+    <box-icon type="logo" color="#7E74F1" name="github" title="GitHub"></box-icon>
+    <box-icon name="instagram" type="logo" color="#7E74F1" title="Instagram"></box-icon>
   </div>
+
   <div class="mt-[27px]">
     <p class="text-[#7E74F1]">© 2024 - PC</p>
   </div>
