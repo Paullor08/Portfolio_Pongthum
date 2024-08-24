@@ -6,60 +6,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-  <link href="aboutme.html" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <title>Portfolio</title>
 </head>
 
-<body>
-  <navbar class="flex w-full z-20 fixed">
-    <div class="navbar bg-black flex items-center p-4">
+<body class="bg-gradient-to-b from-gray-900 to-black text-white">
+  <!-- Navbar -->
+  <nav class="flex w-full z-20 fixed bg-gray-900 bg-opacity-80 backdrop-blur-lg shadow-lg">
+    <div class="navbar flex items-center p-4 w-full">
       <div class="flex-none">
         <button onclick="hideShow()" class="btn btn-square btn-ghost md:hidden" id="menu-button">
           <box-icon name="menu" color="#7e74f1"></box-icon>
         </button>
       </div>
       <div class="flex-1">
-        <p class="btn btn-ghost text-xl text-white">
+        <p class="btn btn-ghost text-xl text-white hover:text-[#7e74f1] transition-colors duration-300 tracking-wide animate-pulse">
           <a href="index.html">Paullor</a>
         </p>
       </div>
       <div class="hidden md:flex md:gap-[120px] text-white font-bold justify-center w-full" id="navbar-links">
-        <a href="./aboutme.html">About</a>
-        <a href="./portfolio.html">Achievement</a>
-        <a href="./contact.html">Contact</a>
+        <a href="./aboutme.html" class="hover:text-[#7e74f1] transition-colors duration-300">About</a>
+        <a href="./portfolio.html" class="hover:text-[#7e74f1] transition-colors duration-300">Achievement</a>
+        <a href="./contact.html" class="hover:text-[#7e74f1] transition-colors duration-300">Contact</a>
       </div>
     </div>
-    <div
-      class="top-[60px] fixed z-20 bg-slate-300 md:hidden flex-col text-center text-black font-bold rounded-xl w-[100px] ml-[10px]"
-      id="mobile-menu">
-      <a href="./aboutme.html">About</a>
-      <a href="./portfolio.html">Achievement</a>
-      <a href="./contact.html">Contact</a>
+    <div class="top-[60px] fixed z-20 bg-slate-300 bg-opacity-90 shadow-lg rounded-xl md:hidden flex-col text-center text-black font-bold w-[100px] ml-[10px] transform transition-transform duration-500 ease-in-out" id="mobile-menu">
+      <a href="./aboutme.html" class="hover:text-[#7e74f1] transition-colors duration-300">About</a>
+      <a href="./portfolio.html" class="hover:text-[#7e74f1] transition-colors duration-300">Achievement</a>
+      <a href="./contact.html" class="hover:text-[#7e74f1] transition-colors duration-300">Contact</a>
     </div>
-  </navbar>
+  </nav>
+
   <script>
     function hideShow() {
       const mobilemenu = document.getElementById("mobile-menu");
       mobilemenu.classList.toggle("hidden");
     }
-    document.addEventListener('click', function(event) {
-    const menuButton = document.getElementById("menu-button");
-    const mobileMenu = document.getElementById("mobile-menu");
 
-    if (!mobileMenu.contains(event.target) && !menuButton.contains(event.target)) {
-      mobileMenu.classList.add("hidden");
-    }
-  });
+    document.addEventListener('click', function(event) {
+      const menuButton = document.getElementById("menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      if (!mobileMenu.contains(event.target) && !menuButton.contains(event.target)) {
+        mobileMenu.classList.add("hidden");
+      }
+    });
   </script>
-  <button onclick="scrollToTop()" id="scrollTopBtn"
-    class="hidden fixed bottom-4 right-4 bg-blue-500 text-white p-2 rounded-full">
+
+  <!-- Scroll to Top Button -->
+  <button onclick="scrollToTop()" id="scrollTopBtn" class="hidden fixed bottom-4 right-4 bg-blue-500 text-white p-2 rounded-full shadow-lg transition-opacity duration-300 ease-in-out">
     ↑ Top
   </button>
 
   <script>
-    window.onscroll = function () { scrollFunction() };
+    window.onscroll = function() { scrollFunction() };
 
     function scrollFunction() {
       if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
@@ -74,156 +75,117 @@
     }
   </script>
 
-  <!-- Start first section -->
-
-  <section-1
-    class="w-full h-[800px] flex justify-center pr-[30px] md:w-full md:h-[770px] bg-black md:items-center lg:h-[990px]">
+  <!-- Start Section 1 -->
+  <section class="w-full h-[800px] flex justify-center bg-black md:h-[770px] lg:h-[990px]">
     <div class="flex flex-col items-center mt-[125px] md:ml-6 md:mb-[248px]">
-      <img
-        class="w-[156px] h-[256px] rounded-xl object-contain border-2 border-black rounded-xl md:hidden md:rounded-xl lg:w-[336px] lg:h-[400px]"
+      <img class="w-[156px] h-[256px] rounded-xl object-cover border-2 border-black md:hidden lg:w-[336px] lg:h-[400px]"
         src="https://img2.pic.in.th/pic/428eb9d2761ee2e465.jpg" />
-      <p class="opacity-80 flex  font-bold text-white text-xs lg:text-xl md:pb-[72px] lg:mt-[52px] lg:mb-[41px]">
+      <p class="opacity-80 font-bold text-white text-xs lg:text-xl md:pb-[72px] lg:mt-[52px] lg:mb-[41px]">
         MY NAME IS
       </p>
       <div class="flex flex-col mb-[20px] items-center mt-[20px] font-extrabold sm:flex-row lg:mb-[53px]">
-        <h1 class="text-white flex text-3xl lg:text-5xl pb-[5px] lg:pb-[15px]">
-          Pongthum
-        </h1>
-        <h1 class="flex text-4xl ml-2 lg:text-5xl lg:text-5xl" style="color: #7e74f1">
-          Chotichai
-        </h1>
+        <h1 class="text-white text-3xl lg:text-5xl pb-[5px] lg:pb-[15px]">Pongthum</h1>
+        <h1 class="text-[#7e74f1] text-4xl ml-2 lg:text-5xl">Chotichai</h1>
       </div>
       <p class="w-[300px] font-medium text-center text-white text-[10px] lg:pt-4 lg:text-sm lg:w-[500px]">
-        "Welcome to Pongthum Chotichai's Coding Journey! Dive into my world
-        where curiosity meets code. Discover insights, tips, and projects
-        reflecting my passion for coding, nurtured since a transformative
-        school leadership camp. From Python challenges to web development
-        adventures, join me in exploring the art and science of programming."
+        "Welcome to Pongthum Chotichai's Coding Journey! Dive into my world where curiosity meets code. Discover insights, tips, and projects reflecting my passion for coding, nurtured since a transformative school leadership camp. From Python challenges to web development adventures, join me in exploring the art and science of programming."
       </p>
     </div>
-    <img class="ml-[150px] w-full max-w-[545px] h-auto hidden md:flex md:w-[545px] md:h-[496px] md:rounded-xl"
+    <img class="ml-[150px] w-full max-w-[545px] h-auto hidden md:flex md:w-[545px] md:h-[496px] rounded-xl mt-[150px]"
       src="https://img2.pic.in.th/pic/428eb9d2761ee2e465.jpg" alt="My Image" />
-  </section-1>
-
-  <!-- End first section -->
+  </section>
+  <!-- End Section 1 -->
 
   <!-- Start Section 2 -->
+  <section id="section-2" class="w-full h-[1000px] bg-black flex flex-col items-center py-32">
+    <h1 class="font-extrabold text-2xl lg:text-4xl text-white">Specialized in</h1>
+    <div class="flex flex-col items-center lg:flex-row lg:justify-center lg:gap-[60px] mt-10">
 
-  <section id="section-2"
-    class="w-full h-[1000px] bg-black flex flex-col items-center py-32 md:w-full md:h-auto md:h-[900px]">
-    <h1 class="font-extrabold text-2xl lg:text-4xl text-white">Specialized
-      in</h1>
-
-    <div
-      class="flex flex-col items-center md:flex md:flex-col md:items-center md:gap-[60px] lg:flex lg:flex-row lg:w-full lg:justify-center">
-
-      <!--box1-->
-      <div id="sec2-box-1"
-        class="flex w-[261px] h-[210px] bg-slate-50 mt-[60px] flex items-center flex-col rounded-lg lg:w-[361px] lg:h-[294px]">
-        <div class="flex boxinside-1 w-[26px] h-[26px] mt-[23px] lg:w-[56px] lg:h-[56px] lg:mt-[53px]">
-          <box-icon name="code-alt" color="#7e74f1" class="w-[25px] h-[25px] lg:w-[55px] lg:h-[55px]"></box-icon>
+      <!-- Box 1 -->
+      <div id="sec2-box-1" class="flex w-[361px] h-[280px] bg-slate-50 rounded-lg flex-col items-center shadow-lg transition-transform duration-500 hover:scale-105 mt-10">
+        <div class="flex items-center justify-center w-[56px] h-[56px] mt-8">
+          <box-icon name="code-alt" color="#7E74F1" class="w-[55px] h-[55px]" aria-label="Coding Icon"></box-icon>
         </div>
-        <p class="flex font-bold text-sm lg:text-2xl mt-[25px]">Coding</p>
-        <p class="flex font-medium mt-[29px] pl-[45px] pr-[45px] text-sm text-2xl text-center">
-          "Passinate in Coding, Skillful in many tech-stacks"
-        </p>
+        <p class="font-bold text-sm lg:text-xl mt-4 lg:mt-6 text-gray-800">Coding</p>
+        <p class="font-medium mt-4 lg:mt-6 px-4 lg:px-6 text-sm text-center text-gray-800 leading-relaxed">"Passionate about Coding, skilled in many tech stacks"</p>
       </div>
 
-      <!--box2-->
-      <div id="sec2-box-2"
-        class="flex w-[261px] h-[210px] bg-slate-50 mt-[60px] flex items-center flex-col rounded-lg lg:w-[361px] lg:h-[294px]">
-        <div class="flex boxinside-1 w-[26px] h-[26px] mt-[23px] lg:w-[56px] lg:h-[56px] lg:mt-[53px]">
-          <box-icon name="question-mark" color="#7E74F1" class="w-[55px] h-[55px]"></box-icon>
+      <!-- Box 2 -->
+      <div id="sec2-box-2" class="flex w-[361px] h-[280px] bg-slate-50 rounded-lg flex-col items-center shadow-lg transition-transform duration-500 hover:scale-105 mt-10">
+        <div class="flex items-center justify-center w-[56px] h-[56px] mt-8">
+          <box-icon name="question-mark" color="#7E74F1" class="w-[55px] h-[55px]" aria-label="Question Mark Icon"></box-icon>
         </div>
-        <p class="flex font-bold text-sm lg:text-2xl mt-[25px]">Problem
-          Solving</p>
-        <p class="flex font-medium mt-[29px] pl-[45px] pr-[45px] text-sm text-2xl text-center">
-          "Keeping calm when meet the Problem and solve it carefully"
-        </p>
+        <p class="font-bold text-sm lg:text-xl mt-4 lg:mt-6 text-gray-800">Problem Solving</p>
+        <p class="font-medium mt-4 lg:mt-6 px-4 lg:px-6 text-sm text-center text-gray-800 leading-relaxed">"Keeping calm when meeting the problem and solving it carefully"</p>
       </div>
 
-      <!--box3-->
-      <div id="sec2-box-3"
-        class="flex w-[261px] h-[210px] bg-slate-50 mt-[60px] flex items-center flex-col rounded-lg lg:w-[361px] lg:h-[294px]">
-        <div class="flex boxinside-1 w-[26px] h-[26px] mt-[23px] lg:w-[56px] lg:h-[56px] lg:mt-[53px]">
-          <box-icon type="solid" name="book-bookmark" color="#7E74F1" class="w-[55px] h-[55px]"></box-icon>
+      <!-- Box 3 -->
+      <div id="sec2-box-3" class="flex w-[361px] h-[280px] bg-slate-50 rounded-lg flex-col items-center shadow-lg transition-transform duration-500 hover:scale-105 mt-10">
+        <div class="flex items-center justify-center w-[56px] h-[56px] mt-8">
+          <box-icon name='book-bookmark' color='#7e74f1' class="w-[55px] h-[55px]" aria-label="Question Mark Icon"></box-icon>
         </div>
-        <p class="flex font-bold text-sm lg:text-2xl mt-[25px]">Self-Learning</p>
-        <p class="flex font-medium mt-[29px] pl-[45px] pr-[45px] text-sm text-2xl text-center">
-          "Love to spend many hours to learn Tech skills"
-        </p>
+        <p class="font-bold text-sm lg:text-xl mt-4 lg:mt-6 text-gray-800">Self-Learning</p>
+        <p class="font-medium mt-4 lg:mt-6 px-4 lg:px-6 text-sm text-center text-gray-800 leading-relaxed">"Love to spend many hours learning tech skills"</p>
       </div>
     </div>
   </section>
-
   <!-- End Section 2 -->
 
   <!-- Start Section 3 -->
+  <section id="section-3" class="bg-black py-32 px-4">
+    <h1 class="text-center text-2xl lg:text-4xl font-extrabold text-white mb-10">My Projects</h1>
+    <div class="flex flex-wrap gap-10 justify-center">
 
-  <section id="section-3"
-    class="w-full h-[1300px] bg-[#000000] flex flex-col items-center justify-center md:h-[2100px] md:py-16 lg:w-full lg:h-[915px]">
-    <div class="flex justify-center pt-[104px]">
-      <p class="font-extrabold text-2xl lg:text-4xl text-white">Featured
-        Portfolio</p>
-    </div>
-    <div class="lg:flex lg:gap-[50px]">
-      <div id="sec3-box-1"
-        class="rounded-lg  w-[261px] h-[210px] border-2 border-white mt-[113px] flex flex-col justify-end lg:w-[361px] lg:h-[294px]">
-        <div id="square-box" class="w-full h-[107px] bg-white">
-          <p>123</p>
-        </div>
-      </div>
-      <div id="sec3-box-2"
-        class="rounded-lg  w-[261px] h-[210px] border-2 border-white mt-[113px] flex flex-col justify-end lg:w-[361px] lg:h-[294px]">
-        <div id="square-box" class="w-full h-[107px] bg-white">
-          <p>123</p>
+      <!-- Project 1 -->
+      <div class="relative w-[300px] h-[400px] bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-500 hover:scale-105">
+        <img src="https://via.placeholder.com/300x400" alt="Project 1" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 transition-opacity duration-300 hover:opacity-100">
+          <p class="text-white text-xl">Project 1</p>
         </div>
       </div>
 
-      <div id="sec3-box-3"
-        class="rounded-lg w-[261px] h-[210px] border-2 border-white mt-[113px] flex flex-col justify-end lg:w-[361px] lg:h-[294px]">
-        <div id="square-box" class="w-full h-[107px] bg-white">
-          <p>123</p>
+      <!-- Project 2 -->
+      <div class="relative w-[300px] h-[400px] bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-500 hover:scale-105">
+        <img src="https://via.placeholder.com/300x400" alt="Project 2" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 transition-opacity duration-300 hover:opacity-100">
+          <p class="text-white text-xl">Project 2</p>
         </div>
       </div>
+
+      <!-- Project 3 -->
+      <div class="relative w-[300px] h-[400px] bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-500 hover:scale-105">
+        <img src="https://via.placeholder.com/300x400" alt="Project 3" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 transition-opacity duration-300 hover:opacity-100">
+          <p class="text-white text-xl">Project 3</p>
+        </div>
+      </div>
+
     </div>
   </section>
-
   <!-- End Section 3 -->
-
-  <!-- Start Section 4 -->
 
   <section id="section-4" class="w-full h-[1000px] bg-black py-16 flex flex-col items-center lg:h-[915px]">
     <div class="flex justify-center">
-      <h1 class="font-extrabold text-2xl lg:mt-[115px] text-white">
-        Personal Blog
-      </h1>
+      <h1 class="font-extrabold text-2xl lg:text-4xl text-white">Personal Blog</h1>
     </div>
-
-    <div
-      class="flex flex-col items-center md:full md:flex md:flex-col md:gap-[60px] lg:flex-row lg:justify-center lg:w-full">
-      <div id="sec4-box-1"
-        class="rounded-lg w-[261px] h-[250px] mt-[113px] border-white border-2 mt-[98px] lg:w-[400px] lg:h-[450px]">
-        <img class="w-[261px] h-[143px] lg:w-[400px] lg:h-[321px] rounded-lg"
-          src="https://img5.pic.in.th/file/secure-sv1/42pf92f81990c141c35.jpg" />
-        <p class="text-white flex justify-center mt-[60px]">
-          <a href="/42blog.html">Learn more</a>
+    <div class="flex flex-col items-center lg:flex-row lg:justify-center lg:w-full mt-10">
+      <div id="sec4-box-1" class="rounded-lg w-[261px] h-[250px] border-2 border-white shadow-lg transition-transform duration-500 hover:scale-105 lg:w-[400px] lg:h-[450px]">
+        <img class="w-[261px] h-[143px] rounded-lg lg:w-[400px] lg:h-[321px] object-fit" src="https://img5.pic.in.th/file/secure-sv1/42pf92f81990c141c35.jpg" />
+        <p class="text-white text-center mt-[60px]">
+          <a href="/42blog.html" class="hover:text-[#7e74f1] transition-colors duration-300">Learn more</a>
         </p>
       </div>
-
     </div>
   </section>
 </body>
 <footer class="bg-[#000000] w-full h-[191px] flex flex-col items-center">
   <div id="icon" class="flex gap-8 mt-[71px]">
-    <box-icon name="gmail" type="logo" color="#7E74F1" title="Gmail"></box-icon>
-    <box-icon type="logo" color="#7E74F1" name="github" title="GitHub"></box-icon>
-    <box-icon name="instagram" type="logo" color="#7E74F1" title="Instagram"></box-icon>
+    <box-icon name="gmail" type="logo" color="#7E74F1"></box-icon>
+    <box-icon type="logo" color="#7E74F1" name="github"></box-icon>
+    <box-icon name="instagram" type="logo" color="#7E74F1"></box-icon>
   </div>
-
   <div class="mt-[27px]">
     <p class="text-[#7E74F1]">© 2024 - PC</p>
   </div>
 </footer>
-
 </html>

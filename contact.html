@@ -6,80 +6,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-  <link href="aboutme.html" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <title>Contact</title>
 </head>
 
-<body>
-  <navbar class="flex w-full z-20 fixed">
-    <div class="navbar bg-black flex items-center p-4">
+<body class="bg-gradient-to-b from-black to-gray-900 text-white">
+  <!-- Navbar -->
+  <navbar class="flex w-full z-20 fixed shadow-lg">
+    <div class="navbar bg-gray-900 bg-opacity-75 backdrop-filter backdrop-blur-lg flex items-center p-4 transition-all duration-500 ease-in-out">
       <div class="flex-none">
         <button onclick="hideShow()" class="btn btn-square btn-ghost md:hidden" id="menu-button">
           <box-icon name="menu" color="#7e74f1"></box-icon>
         </button>
       </div>
       <div class="flex-1">
-        <p class="btn btn-ghost text-xl text-white"><a href="index.html">Paullor</a></p>
+        <p class="btn btn-ghost text-xl text-white hover:text-[#7e74f1] transition-colors duration-300 tracking-wide animate-pulse"><a href="index.html">Paullor</a></p>
       </div>
       <div class="hidden md:flex md:gap-[120px] text-white font-bold justify-center w-full" id="navbar-links">
-        <a href="./aboutme.html">About</a>
-        <a href="./portfolio.html">Achievement</a>
-        <a href="./contact.html">Contact</a>
+        <a href="./aboutme.html" class="hover:text-[#7e74f1] transition-colors duration-300">About</a>
+        <a href="./portfolio.html" class="hover:text-[#7e74f1] transition-colors duration-300">Achievement</a>
+        <a href="./contact.html" class="hover:text-[#7e74f1] transition-colors duration-300">Contact</a>
       </div>
     </div>
-    <div
-      class="top-[60px] rounded-lg fixed z-20 bg-slate-300 md:hidden flex-col text-center text-black font-bold w-[100px] ml-[10px]"
-      id="mobile-menu">
-      <a href="./index.html">Home</a></br>
-      <a href="./aboutme.html">About</a>
-      <a href="./portfolio.html">Achievement</a>
-      <a href="./contact.html">Contact</a>
+    <div class="top-[60px] rounded-lg fixed z-20 bg-slate-300 bg-opacity-90 shadow-lg md:hidden flex-col text-center text-black font-bold w-[100px] ml-[10px] transform transition-transform duration-500 ease-in-out" id="mobile-menu">
+      <a href="./index.html" class="hover:text-[#7e74f1] transition-colors duration-300">Home</a></br>
+      <a href="./aboutme.html" class="hover:text-[#7e74f1] transition-colors duration-300">About</a>
+      <a href="./portfolio.html" class="hover:text-[#7e74f1] transition-colors duration-300">Achievement</a>
+      <a href="./contact.html" class="hover:text-[#7e74f1] transition-colors duration-300">Contact</a>
     </div>
   </navbar>
+
   <script>
     function hideShow() {
       const mobilemenu = document.getElementById("mobile-menu");
       mobilemenu.classList.toggle("hidden");
     }
+
+    function toggleVisibility(id) {
+      const elements = document.querySelectorAll(".toggle-content");
+
+      elements.forEach(element => {
+        if (element.id !== id) {
+          element.classList.add("hidden", "opacity-0");
+        }
+      });
+
+      const elementToShow = document.getElementById(id);
+      elementToShow.classList.toggle("hidden");
+      setTimeout(() => {
+        elementToShow.classList.toggle("opacity-0");
+      }, 10);
+    }
   </script>
-  <div class="hero bg-base-200 min-h-screen bg-black ">
-    <div class="hero-content text-center text-[#7E74F1] flex flex-col">
-      <h1 class="text-5xl font-bold flex text-nowrap mb-[50px] sm:text-6xl md:text-7xl lg:text-9xl">Get in touch</h1>
-      <div class="justify-center flex gap-[50px]">
 
-        <div class="flex flex-col items-center justify-center gap-2 relative">
-          <box-icon type='logo' color="#7E74F1" name='instagram' onclick="hideShowText('paul')"
-            class="flex"></box-icon>
-          <p class="font-extrabold text-[#7E74F1] hidden" id="paul">__paullor__</p>
+  <!-- Hero Section -->
+  <div class="min-h-screen flex items-center justify-center bg-gradient-to-r from-gray-900 via-black to-gray-900 text-[#7E74F1]">
+    <div class="text-center flex flex-col">
+      <h1 class="text-5xl font-bold mb-[50px] sm:text-6xl md:text-7xl lg:text-9xl tracking-wide animate-pulse">Get in touch</h1>
+      <div class="justify-center flex gap-[50px] mt-10">
+
+        <div class="flex flex-col items-center justify-center gap-2 relative group">
+          <box-icon type='logo' color="#7E74F1" name='instagram' onclick="toggleVisibility('paul')" class="flex transform transition-transform duration-500 group-hover:scale-125 cursor-pointer"></box-icon>
+          <p class="font-extrabold text-[#7E74F1] toggle-content hidden opacity-0 transition-opacity duration-500 ease-in-out transform" id="paul">__paullor__</p>
         </div>
 
-        <div class="flex flex-col items-center justify-center gap-2 relative">
-          <box-icon type='logo' color="#7E74F1" name='gmail' onclick="hideShowText('email')"
-            class="flex"></box-icon>
-          <p class="font-extrabold text-[#7E74F1] hidden" id="email">pongthum@gmail.com</p>
+        <div class="flex flex-col items-center justify-center gap-2 relative group">
+          <box-icon type='logo' color="#7E74F1" name='gmail' onclick="toggleVisibility('email')" class="flex transform transition-transform duration-500 group-hover:scale-125 cursor-pointer"></box-icon>
+          <p class="font-extrabold text-[#7E74F1] toggle-content hidden opacity-0 transition-opacity duration-500 ease-in-out transform" id="email">pongthum@gmail.com</p>
         </div>
 
-        <div class="flex flex-col items-center justify-center gap-2 relative">
-          <box-icon name='github' type='logo' color='#7e74f1' onclick="hideShowText('github')"
-            class="flex"></box-icon>
-          <p class="font-extrabold text-[#7E74F1] hidden" id="github">Paullor08</p>
+        <div class="flex flex-col items-center justify-center gap-2 relative group">
+          <box-icon name='github' type='logo' color='#7e74f1' onclick="toggleVisibility('github')" class="flex transform transition-transform duration-500 group-hover:scale-125 cursor-pointer"></box-icon>
+          <p class="font-extrabold text-[#7E74F1] toggle-content hidden opacity-0 transition-opacity duration-500 ease-in-out transform" id="github">Paullor08</p>
         </div>
 
       </div>
     </div>
   </div>
 
-  <script>
-    function hideShowText(id) {
-      const element = document.getElementById(id);
-      element.classList.toggle("hidden");
-    }
-  </script>
-
-  </div>
-  </div>
-  </div>
-  </div>
 </body>
+
+</html>

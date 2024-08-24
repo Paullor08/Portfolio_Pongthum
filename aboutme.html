@@ -9,45 +9,87 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <title>About me</title>
+  <style>
+    .hover-delay {
+      transition: transform 500ms ease-in-out;
+    }
+
+    .hover-delay:hover {
+      transform: scale(1.05);
+      transition-delay: 300ms;
+    }
+  </style>
 </head>
 
-<body class="">
-  <navbar class="flex w-full z-20 fixed">
-    <div class="navbar bg-black flex items-center p-4">
-      <div class="flex-none">
-        <button onclick="hideShow()" class="btn btn-square btn-ghost md:hidden" id="menu-button">
-          <box-icon name="menu" color="#7e74f1"></box-icon>
-        </button>
+<body class="bg-gradient-to-b from-gray-900 to-black text-white">
+  <body class="bg-gradient-to-b from-gray-900 to-black text-white">
+    <!-- Navbar -->
+    <nav class="flex w-full z-20 fixed bg-gray-900 bg-opacity-80 backdrop-blur-lg shadow-lg">
+      <div class="navbar flex items-center p-4 w-full">
+        <div class="flex-none">
+          <button onclick="hideShow()" class="btn btn-square btn-ghost md:hidden" id="menu-button">
+            <box-icon name="menu" color="#7e74f1"></box-icon>
+          </button>
+        </div>
+        <div class="flex-1">
+          <p class="btn btn-ghost text-xl text-white hover:text-[#7e74f1] transition-colors duration-300 tracking-wide animate-pulse">
+            <a href="index.html">Paullor</a>
+          </p>
+        </div>
+        <div class="hidden md:flex md:gap-[120px] text-white font-bold justify-center w-full" id="navbar-links">
+          <a href="./aboutme.html" class="hover:text-[#7e74f1] transition-colors duration-300">About</a>
+          <a href="./portfolio.html" class="hover:text-[#7e74f1] transition-colors duration-300">Achievement</a>
+          <a href="./contact.html" class="hover:text-[#7e74f1] transition-colors duration-300">Contact</a>
+        </div>
       </div>
-      <div class="flex-1">
-        <p class="btn btn-ghost text-xl text-white"><a href="index.html">Paullor</a></p>
+      <div class="top-[60px] fixed z-20 bg-slate-300 bg-opacity-90 shadow-lg rounded-xl md:hidden flex-col text-center text-black font-bold w-[100px] ml-[10px] transform transition-transform duration-500 ease-in-out" id="mobile-menu">
+        <a href="./aboutme.html" class="hover:text-[#7e74f1] transition-colors duration-300">About</a>
+        <a href="./portfolio.html" class="hover:text-[#7e74f1] transition-colors duration-300">Achievement</a>
+        <a href="./contact.html" class="hover:text-[#7e74f1] transition-colors duration-300">Contact</a>
       </div>
-      <div class="hidden md:flex md:gap-[120px] text-white font-bold justify-center w-full" id="navbar-links">
-        <a href="./aboutme.html">About</a>
-        <a href="./portfolio.html">Achievement</a>
-        <a href="./contact.html">Contact</a>
-      </div>
-    </div>
-    <div
-      class="top-[60px] fixed z-20 bg-slate-300 md:hidden flex-col text-center text-black font-bold w-[100px] ml-[10px]"
-      id="mobile-menu">
-      <a href="./index.html">Home</a></br>
-      <a href="./aboutme.html">About</a>
-      <a href="./portfolio.html">Achievement</a>
-      <a href="./contact.html">Contact</a>
-    </div>
-  </navbar>
-  <script>
-    function hideShow() {
-      const mobilemenu = document.getElementById("mobile-menu");
-      mobilemenu.classList.toggle("hidden");
-    }
-  </script>
+    </nav>
+  
+    <script>
+      function hideShow() {
+        const mobilemenu = document.getElementById("mobile-menu");
+        mobilemenu.classList.toggle("hidden");
+      }
+  
+      document.addEventListener('click', function(event) {
+        const menuButton = document.getElementById("menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+  
+        if (!mobileMenu.contains(event.target) && !menuButton.contains(event.target)) {
+          mobileMenu.classList.add("hidden");
+        }
+      });
+    </script>
+  
+    <!-- Scroll to Top Button -->
+    <button onclick="scrollToTop()" id="scrollTopBtn" class="hidden fixed bottom-4 right-4 bg-blue-500 text-white p-2 rounded-full shadow-lg transition-opacity duration-300 ease-in-out">
+      ↑ Top
+    </button>
+  
+    <script>
+      window.onscroll = function() { scrollFunction() };
+  
+      function scrollFunction() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+          document.getElementById("scrollTopBtn").classList.remove("hidden");
+        } else {
+          document.getElementById("scrollTopBtn").classList.add("hidden");
+        }
+      }
+  
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    </script>
 
   <!--start section1-->
 
   <section id="section-1"
-    class="bg-black w-full h-[971px] pt-[127px] md:flex md:w-full md:h-[900px]">
+    class="bg-black w-full h-[971px] pt-[127px] md:flex md:w-full md:h-[900px] ">
     <div class="flex flex-col justify-center items-center lg:flex-row lg:pl-[100px]">
       <video class="w-[300px] h-[200px] lg:w-[547px] lg:h-[400px] rounded-lg" autoplay loop muted>
         <source src="THANK YOU, CRISTIANO RONALDO _ Real Madrid Official Video.mp4" />
@@ -82,7 +124,7 @@
     <div class="h-[290px] gap-[46px] flex flex-col md:flex-col lg:flex-row md:justify-center md:mx-[35px]">
       <!--box1-->
       <div id="sec2-box-1"
-        class="flex w-[261px] h-[210px] lg:w-[361px] lg:h-[294px] bg-slate-50 border-2 mt-[60px] flex items-center flex-col rounded-lg relative">
+        class="flex w-[361px] h-[280px] bg-slate-50 rounded-lg flex-col items-center shadow-lg mt-10 hover-delay">
         <div
           class="flex boxinside-1 w-[96px] h-[86px] rounded-full absolute z-10 top-0 left-[179px] translate-x-[-100%] translate-y-[-50%] lg:translate-x-[-50%] lg:translate-y-[-50%]">
           <img src="https://img5.pic.in.th/file/secure-sv1/kmitl2.png" alt=""></div>
@@ -94,7 +136,7 @@
 
       <!--box2-->
       <div id="sec2-box-2"
-        class="flex w-[261px] h-[210px] lg:w-[361px] lg:h-[294px] bg-slate-50 border-2 mt-[60px] flex items-center flex-col rounded-lg relative">
+        class="flex w-[361px] h-[280px] bg-slate-50 rounded-lg flex-col items-center shadow-lg mt-10 hover-delay">
         <div
           class="flex boxinside-2 w-[96px] h-[86px] rounded-full absolute z-10 top-0 left-[179px] translate-x-[-100%] translate-y-[-50%] lg:translate-x-[-50%] lg:translate-y-[-50%]">
           <img src="https://img5.pic.in.th/file/secure-sv1/kmitl2.png" alt=""></div>
@@ -106,7 +148,7 @@
 
       <!--box3-->
       <div id="sec2-box-3"
-        class="flex w-[261px] h-[210px] lg:w-[361px] lg:h-[294px] bg-slate-50 border-2 mt-[60px] flex items-center flex-col rounded-lg relative">
+        class="flex w-[361px] h-[280px] bg-slate-50 rounded-lg flex-col items-center shadow-lg mt-10 hover-delay">
         <div
           class="flex boxinside-3 w-[96px] h-[86px] rounded-full absolute z-10 top-0 left-[179px] translate-x-[-100%] translate-y-[-50%] lg:translate-x-[-50%] lg:translate-y-[-50%]">
           <img src="https://img5.pic.in.th/file/secure-sv1/kmitl2.png" alt=""></div>
