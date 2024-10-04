@@ -19,68 +19,30 @@
 
   <body class="bg-gradient-to-b from-gray-900 to-black text-white">
     <!-- Navbar -->
-    <nav
-    class="flex w-full z-20 fixed bg-gray-900 bg-opacity-80 backdrop-blur-lg shadow-lg"
-  >
-    <div class="navbar flex items-center p-4 w-full">
-      <div class="flex-none">
-        <button
-          onclick="hideShow()"
-          class="btn btn-square btn-ghost md:hidden"
-          id="menu-button"
-        >
-          <box-icon name="menu" color="#7e74f1"></box-icon>
-        </button>
+    <nav class="flex w-full z-20 fixed bg-gray-900 bg-opacity-80 backdrop-blur-lg shadow-lg">
+      <div class="navbar flex items-center p-4 w-full">
+        <div class="flex-none">
+          <button onclick="hideShow()" class="btn btn-square btn-ghost md:hidden" id="menu-button">
+            <box-icon name="menu" color="#7e74f1"></box-icon>
+          </button>
+        </div>
+        <div class="flex-1">
+          <p class="btn btn-ghost text-xl text-white hover:text-[#7e74f1] transition-colors duration-300 tracking-wide animate-pulse">
+            <a href="index.html">Paullor</a>
+          </p>
+        </div>
+        <div class="hidden md:flex md:gap-[120px] text-white font-bold justify-center w-full" id="navbar-links">
+          <a href="./aboutme.html" class="hover:text-[#7e74f1] transition-colors duration-300">About</a>
+          <a href="./portfolio.html" class="hover:text-[#7e74f1] transition-colors duration-300">Achievement</a>
+          <a href="./contact.html" class="hover:text-[#7e74f1] transition-colors duration-300">Contact</a>
+        </div>
       </div>
-      <div class="flex-1">
-        <p
-          class="btn btn-ghost text-xl text-white hover:text-[#7e74f1] transition-colors duration-300 tracking-wide animate-pulse"
-        >
-          <a href="index.html">Paullor</a>
-        </p>
+      <div class="top-[60px] fixed z-20 bg-slate-300 bg-opacity-90 shadow-lg rounded-xl md:hidden flex-col text-center text-black font-bold w-[100px] ml-[10px] transform transition-transform duration-500 ease-in-out" id="mobile-menu">
+        <a href="./aboutme.html" class="hover:text-[#7e74f1] transition-colors duration-300">About</a>
+        <a href="./portfolio.html" class="hover:text-[#7e74f1] transition-colors duration-300">Achievement</a>
+        <a href="./contact.html" class="hover:text-[#7e74f1] transition-colors duration-300">Contact</a>
       </div>
-      <div
-        class="hidden md:flex md:gap-12 lg:gap-16 text-white font-bold justify-center w-full"
-        id="navbar-links"
-      >
-        <a
-          href="./aboutme.html"
-          class="hover:text-[#7e74f1] transition-colors duration-300"
-          >About</a
-        >
-        <a
-          href="./portfolio.html"
-          class="hover:text-[#7e74f1] transition-colors duration-300"
-          >Achievement</a
-        >
-        <a
-          href="./contact.html"
-          class="hover:text-[#7e74f1] transition-colors duration-300"
-          >Contact</a
-        >
-      </div>
-    </div>
-    <div
-      class="hidden md:hidden fixed top-[60px] z-20 bg-slate-300 bg-opacity-90 shadow-lg rounded-xl flex-col text-center text-black font-bold w-[180px] mx-4 md:flex"
-      id="mobile-menu"
-    >
-      <a
-        href="./aboutme.html"
-        class="py-2 hover:text-[#7e74f1] transition-colors duration-300"
-        >About</a
-      >
-      <a
-        href="./portfolio.html"
-        class="py-2 hover:text-[#7e74f1] transition-colors duration-300"
-        >Achievement</a
-      >
-      <a
-        href="./contact.html"
-        class="py-2 hover:text-[#7e74f1] transition-colors duration-300"
-        >Contact</a
-      >
-    </div>
-  </nav>
+    </nav>
 
   <!-- Scroll to Top Button -->
   <button
@@ -237,7 +199,7 @@
   </section>
     <!-- End Section 2 -->
 
-   <!-- Start Section 3 -->
+  <!-- Start Section 3 -->
 <section id="section-3" class="bg-black py-16 px-4">
   <h1 class="text-center text-2xl lg:text-4xl font-extrabold text-white mb-10">
     My Projects
@@ -280,11 +242,12 @@
       </div>
     </a>
     <!-- Project 3 -->
+    <a href="https://github.com/maliojiw/jeamamzon">
     <div
       class="relative w-full sm:w-[335px] h-[300px] sm:h-[400px] bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-500 hover:scale-105"
     >
       <img
-        src="https://via.placeholder.com/300x400"
+        src="https://img2.pic.in.th/pic/Screenshot-8a7b3ad9095f13dac.png"
         alt="Project 3"
         class="w-full h-full object-cover"
       />
