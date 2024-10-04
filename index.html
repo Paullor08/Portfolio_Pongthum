@@ -1,42 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <title>Portfolio</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-  <title>Portfolio</title>
-</head>
-
-<body class="bg-gradient-to-b from-gray-900 to-black text-white">
-  <!-- Navbar -->
-  <nav class="flex w-full z-20 fixed bg-gray-900 bg-opacity-80 backdrop-blur-lg shadow-lg">
+  <body class="bg-gradient-to-b from-gray-900 to-black text-white">
+    <!-- Navbar -->
+    <nav
+    class="flex w-full z-20 fixed bg-gray-900 bg-opacity-80 backdrop-blur-lg shadow-lg"
+  >
     <div class="navbar flex items-center p-4 w-full">
       <div class="flex-none">
-        <button onclick="hideShow()" class="btn btn-square btn-ghost md:hidden" id="menu-button">
+        <button
+          onclick="hideShow()"
+          class="btn btn-square btn-ghost md:hidden"
+          id="menu-button"
+        >
           <box-icon name="menu" color="#7e74f1"></box-icon>
         </button>
       </div>
       <div class="flex-1">
-        <p class="btn btn-ghost text-xl text-white hover:text-[#7e74f1] transition-colors duration-300 tracking-wide animate-pulse">
+        <p
+          class="btn btn-ghost text-xl text-white hover:text-[#7e74f1] transition-colors duration-300 tracking-wide animate-pulse"
+        >
           <a href="index.html">Paullor</a>
         </p>
       </div>
-      <div class="hidden md:flex md:gap-[120px] text-white font-bold justify-center w-full" id="navbar-links">
-        <a href="./aboutme.html" class="hover:text-[#7e74f1] transition-colors duration-300">About</a>
-        <a href="./portfolio.html" class="hover:text-[#7e74f1] transition-colors duration-300">Achievement</a>
-        <a href="./contact.html" class="hover:text-[#7e74f1] transition-colors duration-300">Contact</a>
+      <div
+        class="hidden md:flex md:gap-12 lg:gap-16 text-white font-bold justify-center w-full"
+        id="navbar-links"
+      >
+        <a
+          href="./aboutme.html"
+          class="hover:text-[#7e74f1] transition-colors duration-300"
+          >About</a
+        >
+        <a
+          href="./portfolio.html"
+          class="hover:text-[#7e74f1] transition-colors duration-300"
+          >Achievement</a
+        >
+        <a
+          href="./contact.html"
+          class="hover:text-[#7e74f1] transition-colors duration-300"
+          >Contact</a
+        >
       </div>
     </div>
-    <div class="top-[60px] fixed z-20 bg-slate-300 bg-opacity-90 shadow-lg rounded-xl md:hidden flex-col text-center text-black font-bold w-[100px] ml-[10px] transform transition-transform duration-500 ease-in-out" id="mobile-menu">
-      <a href="./aboutme.html" class="hover:text-[#7e74f1] transition-colors duration-300">About</a>
-      <a href="./portfolio.html" class="hover:text-[#7e74f1] transition-colors duration-300">Achievement</a>
-      <a href="./contact.html" class="hover:text-[#7e74f1] transition-colors duration-300">Contact</a>
+    <div
+      class="hidden md:hidden fixed top-[60px] z-20 bg-slate-300 bg-opacity-90 shadow-lg rounded-xl flex-col text-center text-black font-bold w-[180px] mx-4 md:flex"
+      id="mobile-menu"
+    >
+      <a
+        href="./aboutme.html"
+        class="py-2 hover:text-[#7e74f1] transition-colors duration-300"
+        >About</a
+      >
+      <a
+        href="./portfolio.html"
+        class="py-2 hover:text-[#7e74f1] transition-colors duration-300"
+        >Achievement</a
+      >
+      <a
+        href="./contact.html"
+        class="py-2 hover:text-[#7e74f1] transition-colors duration-300"
+        >Contact</a
+      >
     </div>
   </nav>
+
+  <!-- Scroll to Top Button -->
+  <button
+    onclick="scrollToTop()"
+    id="scrollTopBtn"
+    class="hidden fixed bottom-4 right-4 bg-blue-500 text-white p-2 rounded-full shadow-lg transition-opacity duration-300 ease-in-out"
+  >
+    ↑ Top
+  </button>
 
   <script>
     function hideShow() {
@@ -44,26 +97,27 @@
       mobilemenu.classList.toggle("hidden");
     }
 
-    document.addEventListener('click', function(event) {
+    document.addEventListener("click", function (event) {
       const menuButton = document.getElementById("menu-button");
       const mobileMenu = document.getElementById("mobile-menu");
 
-      if (!mobileMenu.contains(event.target) && !menuButton.contains(event.target)) {
+      if (
+        !mobileMenu.contains(event.target) &&
+        !menuButton.contains(event.target)
+      ) {
         mobileMenu.classList.add("hidden");
       }
     });
-  </script>
 
-  <!-- Scroll to Top Button -->
-  <button onclick="scrollToTop()" id="scrollTopBtn" class="hidden fixed bottom-4 right-4 bg-blue-500 text-white p-2 rounded-full shadow-lg transition-opacity duration-300 ease-in-out">
-    ↑ Top
-  </button>
-
-  <script>
-    window.onscroll = function() { scrollFunction() };
+    window.onscroll = function () {
+      scrollFunction();
+    };
 
     function scrollFunction() {
-      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      if (
+        document.body.scrollTop > 200 ||
+        document.documentElement.scrollTop > 200
+      ) {
         document.getElementById("scrollTopBtn").classList.remove("hidden");
       } else {
         document.getElementById("scrollTopBtn").classList.add("hidden");
@@ -71,113 +125,208 @@
     }
 
     function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   </script>
 
   <!-- Start Section 1 -->
-  <section class="w-full h-[800px] flex justify-center bg-black md:h-[770px] lg:h-[990px]">
-    <div class="flex flex-col items-center mt-[125px] md:ml-6 md:mb-[248px]">
-      <img class="w-[156px] h-[256px] rounded-xl object-cover border-2 border-black md:hidden lg:w-[336px] lg:h-[400px]"
-        src="https://img2.pic.in.th/pic/428eb9d2761ee2e465.jpg" />
-      <p class="opacity-80 font-bold text-white text-xs lg:text-xl md:pb-[72px] lg:mt-[52px] lg:mb-[41px]">
+  <section
+    class="w-full h-auto flex justify-center items-center flex-col bg-black p-8"
+  >
+    <div class="flex flex-col items-center text-center mt-[100px]">
+      <img
+        class="w-[156px] h-[256px] lg:w-[356px] h-[356px] rounded-xl object-cover border-2 border-black md:w-[200px] md:h-[400px]"
+        src="https://img2.pic.in.th/pic/428eb9d2761ee2e465.jpg"
+      />
+      <p class="opacity-80 font-bold text-white text-xs lg:text-xl mt-8">
         MY NAME IS
       </p>
-      <div class="flex flex-col mb-[20px] items-center mt-[20px] font-extrabold sm:flex-row lg:mb-[53px]">
-        <h1 class="text-white text-3xl lg:text-5xl pb-[5px] lg:pb-[15px]">Pongthum</h1>
+      <div
+        class="flex flex-col mb-[20px] items-center mt-2 font-extrabold sm:flex-row"
+      >
+        <h1 class="text-white text-3xl lg:text-5xl pb-[5px]">Pongthum</h1>
         <h1 class="text-[#7e74f1] text-4xl ml-2 lg:text-5xl">Chotichai</h1>
       </div>
-      <p class="w-[300px] font-medium text-center text-white text-[10px] lg:pt-4 lg:text-sm lg:w-[500px]">
-        "Welcome to Pongthum Chotichai's Coding Journey! Dive into my world where curiosity meets code. Discover insights, tips, and projects reflecting my passion for coding, nurtured since a transformative school leadership camp. From Python challenges to web development adventures, join me in exploring the art and science of programming."
+      <p class="w-[90%] max-w-[600px] font-medium text-center text-white text-sm lg:text-base">
+        "Welcome to Pongthum Chotichai's Coding Journey! Dive into my world
+        where curiosity meets code. Discover insights, tips, and projects
+        reflecting my passion for coding, nurtured since a transformative
+        school leadership camp. From Python challenges to web development
+        adventures, join me in exploring the art and science of programming."
       </p>
     </div>
-    <img class="ml-[150px] w-full max-w-[545px] h-auto hidden md:flex md:w-[545px] md:h-[496px] rounded-xl mt-[150px]"
-      src="https://img2.pic.in.th/pic/428eb9d2761ee2e465.jpg" alt="My Image" />
   </section>
   <!-- End Section 1 -->
 
   <!-- Start Section 2 -->
-  <section id="section-2" class="w-full h-[1000px] bg-black flex flex-col items-center py-32">
+  <section
+    id="section-2"
+    class="w-full bg-black flex flex-col items-center py-32"
+  >
     <h1 class="font-extrabold text-2xl lg:text-4xl text-white">Specialized in</h1>
-    <div class="flex flex-col items-center lg:flex-row lg:justify-center lg:gap-[60px] mt-10">
-
+    <div class="flex flex-wrap justify-center gap-10 mt-10">
       <!-- Box 1 -->
-      <div id="sec2-box-1" class="flex w-[361px] h-[280px] bg-slate-50 rounded-lg flex-col items-center shadow-lg transition-transform duration-500 hover:scale-105 mt-10">
+      <div
+        id="sec2-box-1"
+        class="flex w-[300px] h-[280px] bg-slate-50 rounded-lg flex-col items-center shadow-lg transition-transform duration-500 hover:scale-105"
+      >
         <div class="flex items-center justify-center w-[56px] h-[56px] mt-8">
-          <box-icon name="code-alt" color="#7E74F1" class="w-[55px] h-[55px]" aria-label="Coding Icon"></box-icon>
+          <box-icon
+            name="code-alt"
+            color="#7E74F1"
+            class="w-[55px] h-[55px]"
+            aria-label="Coding Icon"
+          ></box-icon>
         </div>
-        <p class="font-bold text-sm lg:text-xl mt-4 lg:mt-6 text-gray-800">Coding</p>
-        <p class="font-medium mt-4 lg:mt-6 px-4 lg:px-6 text-sm text-center text-gray-800 leading-relaxed">"Passionate about Coding, skilled in many tech stacks"</p>
+        <p class="font-bold text-sm lg:text-xl mt-4 lg:mt-6 text-gray-800">
+          Coding
+        </p>
+        <p
+          class="font-medium mt-4 lg:mt-6 px-4 lg:px-6 text-sm text-center text-gray-800 leading-relaxed"
+        >
+          "Passionate about Coding, skilled in many tech stacks"
+        </p>
       </div>
 
       <!-- Box 2 -->
-      <div id="sec2-box-2" class="flex w-[361px] h-[280px] bg-slate-50 rounded-lg flex-col items-center shadow-lg transition-transform duration-500 hover:scale-105 mt-10">
+      <div
+        id="sec2-box-2"
+        class="flex w-[300px] h-[280px] bg-slate-50 rounded-lg flex-col items-center shadow-lg transition-transform duration-500 hover:scale-105"
+      >
         <div class="flex items-center justify-center w-[56px] h-[56px] mt-8">
-          <box-icon name="question-mark" color="#7E74F1" class="w-[55px] h-[55px]" aria-label="Question Mark Icon"></box-icon>
+          <box-icon
+            name="question-mark"
+            color="#7E74F1"
+            class="w-[55px] h-[55px]"
+            aria-label="Question Mark Icon"
+          ></box-icon>
         </div>
-        <p class="font-bold text-sm lg:text-xl mt-4 lg:mt-6 text-gray-800">Problem Solving</p>
-        <p class="font-medium mt-4 lg:mt-6 px-4 lg:px-6 text-sm text-center text-gray-800 leading-relaxed">"Keeping calm when meeting the problem and solving it carefully"</p>
+        <p class="font-bold text-sm lg:text-xl mt-4 lg:mt-6 text-gray-800">
+          Problem Solving
+        </p>
+        <p
+          class="font-medium mt-4 lg:mt-6 px-4 lg:px-6 text-sm text-center text-gray-800 leading-relaxed"
+        >
+          "Focused on solving complex problems with ease."
+        </p>
       </div>
 
       <!-- Box 3 -->
-      <div id="sec2-box-3" class="flex w-[361px] h-[280px] bg-slate-50 rounded-lg flex-col items-center shadow-lg transition-transform duration-500 hover:scale-105 mt-10">
+      <div
+        id="sec2-box-3"
+        class="flex w-[300px] h-[280px] bg-slate-50 rounded-lg flex-col items-center shadow-lg transition-transform duration-500 hover:scale-105"
+      >
         <div class="flex items-center justify-center w-[56px] h-[56px] mt-8">
-          <box-icon name='book-bookmark' color='#7e74f1' class="w-[55px] h-[55px]" aria-label="Question Mark Icon"></box-icon>
+          <box-icon
+            name="terminal"
+            color="#7E74F1"
+            class="w-[55px] h-[55px]"
+            aria-label="Terminal Icon"
+          ></box-icon>
         </div>
-        <p class="font-bold text-sm lg:text-xl mt-4 lg:mt-6 text-gray-800">Self-Learning</p>
-        <p class="font-medium mt-4 lg:mt-6 px-4 lg:px-6 text-sm text-center text-gray-800 leading-relaxed">"Love to spend many hours learning tech skills"</p>
-      </div>
-    </div>
-  </section>
-  <!-- End Section 2 -->
-
-  <!-- Start Section 3 -->
-  <section id="section-3" class="bg-black py-32 px-4">
-    <h1 class="text-center text-2xl lg:text-4xl font-extrabold text-white mb-10">My Projects</h1>
-    <div class="flex flex-wrap gap-10 justify-center">
-
-      <!-- Project 1 -->
-      <div class="relative w-[300px] h-[400px] bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-500 hover:scale-105">
-        <img src="https://via.placeholder.com/300x400" alt="Project 1" class="w-full h-full object-cover" />
-        <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 transition-opacity duration-300 hover:opacity-100">
-          <p class="text-white text-xl">Project 1</p>
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="relative w-[300px] h-[400px] bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-500 hover:scale-105">
-        <img src="https://via.placeholder.com/300x400" alt="Project 2" class="w-full h-full object-cover" />
-        <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 transition-opacity duration-300 hover:opacity-100">
-          <p class="text-white text-xl">Project 2</p>
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="relative w-[300px] h-[400px] bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-500 hover:scale-105">
-        <img src="https://via.placeholder.com/300x400" alt="Project 3" class="w-full h-full object-cover" />
-        <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 transition-opacity duration-300 hover:opacity-100">
-          <p class="text-white text-xl">Project 3</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-  <!-- End Section 3 -->
-
-  <section id="section-4" class="w-full h-[1000px] bg-black py-16 flex flex-col items-center lg:h-[915px]">
-    <div class="flex justify-center">
-      <h1 class="font-extrabold text-2xl lg:text-4xl text-white">Personal Blog</h1>
-    </div>
-    <div class="flex flex-col items-center lg:flex-row lg:justify-center lg:w-full mt-10">
-      <div id="sec4-box-1" class="rounded-lg w-[261px] h-[250px] border-2 border-white shadow-lg transition-transform duration-500 hover:scale-105 lg:w-[400px] lg:h-[450px]">
-        <img class="w-[261px] h-[143px] rounded-lg lg:w-[400px] lg:h-[321px] object-fit" src="https://img5.pic.in.th/file/secure-sv1/42pf92f81990c141c35.jpg" />
-        <p class="text-white text-center mt-[60px]">
-          <a href="https://medium.com/@pongthum12246/เด็กศิลป์ไปค่าย-42-81f469850a37" class="hover:text-[#7e74f1] transition-colors duration-300">Learn more</a>
+        <p class="font-bold text-sm lg:text-xl mt-4 lg:mt-6 text-gray-800">
+          Programming
+        </p>
+        <p
+          class="font-medium mt-4 lg:mt-6 px-4 lg:px-6 text-sm text-center text-gray-800 leading-relaxed"
+        >
+          "Building scalable and efficient applications."
         </p>
       </div>
     </div>
   </section>
-</body>
+    <!-- End Section 2 -->
+
+   <!-- Start Section 3 -->
+<section id="section-3" class="bg-black py-16 px-4">
+  <h1 class="text-center text-2xl lg:text-4xl font-extrabold text-white mb-10">
+    My Projects
+  </h1>
+  <div class="flex flex-wrap gap-6 justify-center">
+    <!-- Project 1 -->
+    <a href="https://github.com/Paullor08/Weather-app">
+      <div
+        class="relative w-full sm:w-[355px] h-[300px] sm:h-[385px] bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-500 hover:scale-105"
+      >
+        <img
+          src="https://img2.pic.in.th/pic/imageb7c91865173e18d9.png"
+          alt="Project 1"
+          class="w-full h-full object-cover"
+        />
+        <div
+          class="flex flex-col absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 transition-opacity duration-300 hover:opacity-100"
+        >
+          <p class="text-white text-lg sm:text-xl">Project 1</p>
+          <p class="text-white text-lg sm:text-xl opacity-50">Source Code</p>
+        </div>
+      </div>
+    </a>
+    <!-- Project 2 -->
+    <a href="https://github.com/Paullor08/WhackMyFriend">
+      <div
+        class="relative w-full sm:w-[355px] h-[300px] sm:h-[385px] bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-500 hover:scale-105"
+      >
+        <img
+          src="https://img2.pic.in.th/pic/game0e52d1ca7232197e.png"
+          alt="Project 2"
+          class="w-full h-full object-cover"
+        />
+        <div
+          class="flex flex-col absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 transition-opacity duration-300 hover:opacity-100"
+        >
+          <p class="text-white text-lg sm:text-xl">Project 2</p>
+          <p class="text-white text-lg sm:text-xl opacity-50">Source Code</p>
+        </div>
+      </div>
+    </a>
+    <!-- Project 3 -->
+    <div
+      class="relative w-full sm:w-[335px] h-[300px] sm:h-[400px] bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-500 hover:scale-105"
+    >
+      <img
+        src="https://via.placeholder.com/300x400"
+        alt="Project 3"
+        class="w-full h-full object-cover"
+      />
+      <div
+        class="flex flex-col absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 transition-opacity duration-300 hover:opacity-100"
+      >
+        <p class="text-white text-lg sm:text-xl">Project 3</p>
+        <p class="text-white text-lg sm:text-xl opacity-50">Source Code</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Section 3 -->
+
+<a href="https://medium.com/@pongthum12246/เด็กศิลป์ไปค่าย-42-81f469850a37">
+<section id="section-4" class="w-full py-16 flex flex-col items-center lg:h-[915px] bg-black">
+  <div class="flex justify-center">
+    <h1 class="font-extrabold text-2xl lg:text-4xl text-white">
+      Personal Blog
+    </h1>
+  </div>
+  <div class="flex flex-col items-center lg:flex-row lg:justify-center lg:w-full mt-10">
+    <div
+      id="sec4-box-1"
+      class="rounded-lg w-full sm:w-[261px] h-[250px] border-2 border-white shadow-lg transition-transform duration-500 hover:scale-105 lg:w-[400px] lg:h-[450px]"
+    >
+      <img
+        class="w-full h-[143px] lg:w-[400px] lg:h-[321px] object-cover"
+        src="https://img5.pic.in.th/file/secure-sv1/42pf92f81990c141c35.jpg"
+      />
+      <p class="text-white text-center mt-[20px] lg:mt-[60px]">
+        <a
+          href="https://medium.com/@pongthum12246/เด็กศิลป์ไปค่าย-42-81f469850a37"
+          class="hover:text-[#7e74f1] transition-colors duration-300"
+          >Learn more</a
+        >
+      </p>
+    </div>
+  </div>
+</section>
+</a>
+
 <footer class="bg-[#000000] w-full h-[191px] flex flex-col items-center">
   <div id="icon" class="flex gap-8 mt-[71px]">
     <box-icon name="gmail" type="logo" color="#7E74F1"></box-icon>
@@ -188,4 +337,5 @@
     <p class="text-[#7E74F1]">© 2024 - PC</p>
   </div>
 </footer>
+
 </html>
